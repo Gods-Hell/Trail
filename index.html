@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IIM Trichy — Term IV Schedule</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ct:#1a1a1a;--cs:#6b7280;--cb:#f9fafb;--cp:#ffffff;
+  --bd:rgba(0,0,0,0.1);--bs:rgba(0,0,0,0.18);--bp:rgba(0,0,0,0.28);
+  --rm:8px;--rl:12px;
+  --font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+}
+@media(prefers-color-scheme:dark){:root{
+  --ct:#f0f0f0;--cs:#9ca3af;--cb:#2c2c2e;--cp:#1c1c1e;
+  --bd:rgba(255,255,255,0.1);--bs:rgba(255,255,255,0.18);--bp:rgba(255,255,255,0.28);
+}}
+body{font-family:var(--font);color:var(--ct);background:var(--cp);padding:1.5rem;max-width:1200px;margin:0 auto}
+
+/* LOADING */
+.loader{display:flex;flex-direction:column;align-items:center;justify-content:center;height:60vh;gap:12px}
+.spinner{width:28px;height:28px;border:2.5px solid var(--bd);border-top-color:#534AB7;border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loader p{font-size:13px;color:var(--cs)}
+
+/* SCREENS */
+.screen{display:none}.screen.active{display:block}
+
+/* SETUP */
+.sh1{font-size:20px;font-weight:500;margin-bottom:4px}
+.sh2{font-size:12px;color:var(--cs);margin-bottom:1.5rem}
+.slbl{font-size:10px;font-weight:500;color:var(--cs);letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.5rem}
+.chip{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:999px;border:0.5px solid var(--bs);font-size:12px;cursor:pointer;background:var(--cp);color:var(--cs);transition:background .12s,border-color .12s,color .12s;user-select:none;white-space:nowrap}
+.chip:hover{background:var(--cb);border-color:var(--bp)}
+.chip.on{background:#EEEDFE;border-color:#AFA9EC;color:#3C3489}
+.chip .dot{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.45;display:inline-block;flex-shrink:0}
+.chip.on .dot{opacity:1}
+.chip select{border:none;background:transparent;font-size:11px;color:inherit;cursor:pointer;outline:none;padding:0;margin-left:2px}
+.sf{display:flex;align-items:center;gap:10px;padding-top:1rem;border-top:0.5px solid var(--bd)}
+.btn-p{display:inline-flex;align-items:center;gap:6px;padding:7px 18px;border-radius:var(--rm);border:none;font-size:13px;cursor:pointer;background:#534AB7;color:#fff;font-weight:500;transition:opacity .12s}
+.btn-p:hover{opacity:.88}.btn-p:disabled{opacity:.4;cursor:not-allowed}
+.scnt{font-size:12px;color:var(--cs)}
+
+/* MAIN */
+.top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1.25rem;gap:1rem;flex-wrap:wrap}
+.top-l .eyebrow{font-size:10px;font-weight:500;color:var(--cs);letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px}
+.top-l .title{font-size:18px;font-weight:500}
+.stats{display:flex;gap:8px}
+.stat{background:var(--cb);border-radius:var(--rm);padding:8px 14px;text-align:center}
+.stat-n{font-size:18px;font-weight:500;line-height:1}
+.stat-l{font-size:10px;color:var(--cs);margin-top:2px;white-space:nowrap}
+.sbar{display:flex;align-items:center;gap:8px;background:var(--cb);border-radius:var(--rm);padding:7px 12px;border:0.5px solid var(--bd);cursor:pointer;margin-bottom:10px;transition:border-color .12s}
+.sbar:hover{border-color:var(--bs)}
+.sbar-txt{font-size:12px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sbar-edit{font-size:11px;color:#534AB7;white-space:nowrap;display:flex;align-items:center;gap:3px;flex-shrink:0}
+.toolbar{display:flex;align-items:center;gap:6px;margin-bottom:1rem;flex-wrap:wrap}
+.wc{padding:4px 11px;border-radius:var(--rm);border:0.5px solid var(--bs);font-size:11px;cursor:pointer;background:var(--cp);color:var(--cs);transition:all .12s}
+.wc:hover{background:var(--cb)}.wc.on{background:#EEEDFE;border-color:#AFA9EC;color:#3C3489;font-weight:500}
+.updated-lbl{margin-left:auto;font-size:11px;color:var(--cs);opacity:.7}
+
+/* TABLE */
+.tw{overflow-x:auto;border-radius:var(--rl);border:0.5px solid var(--bd)}
+table{width:100%;border-collapse:collapse;font-size:12px;min-width:760px;table-layout:fixed}
+colgroup col.c-date{width:100px}
+colgroup col.c-day{width:34px}
+colgroup col.c-rem{width:140px}
+colgroup col.c-slot{}
+thead tr{background:var(--cb)}
+th{padding:8px 6px;font-size:10px;font-weight:500;color:var(--cs);text-align:center;border-bottom:0.5px solid var(--bd);white-space:nowrap;letter-spacing:.03em}
+th:first-child{text-align:left;padding-left:12px}
+tbody tr{border-bottom:0.5px solid var(--bd)}
+tbody tr:last-child{border-bottom:none}
+tbody tr:hover td{background:var(--cb)}
+td{padding:5px;vertical-align:top}
+td.dc{padding:5px 12px;white-space:nowrap;font-size:11px;font-weight:500}
+td.dy{font-size:10px;color:var(--cs);text-align:center;padding:5px 3px;font-weight:500}
+td.rc{font-size:10px;color:var(--cs);padding:5px 6px;vertical-align:top;word-break:break-word;font-style:italic;line-height:1.4}
+td.rc ol{padding-left:13px;margin:0;list-style-type:decimal}
+td.rc li{margin-bottom:2px}
+tr.tr-today{background:#EEEDFE!important}
+tr.tr-today td.dc{color:#3C3489}
+tr.tr-today:hover td{background:#CECBF6}
+.pill{display:block;border-radius:5px;padding:3px 6px;margin:2px 0;font-size:11px;line-height:1.3;word-break:break-word}
+.cls{background:#E6F1FB;color:#0C447C}
+.cls.my{border:1.5px solid #534AB7;background:#EEEDFE;color:#3C3489}
+.exam{background:#FCEBEB;color:#791F1F}
+.hol{background:#FAEEDA;color:#633806}
+.gs{background:#F1EFE8;color:#444441}
+.ev{background:#EAF3DE;color:#27500A}
+.ps{font-weight:500;display:block}.pr{font-size:10px;opacity:.7}
+.em{color:var(--bd);font-size:11px;text-align:center;display:block;padding:5px 0}
+
+/* ERROR */
+.err-box{background:#FCEBEB;border:0.5px solid #F09595;border-radius:var(--rm);padding:1.25rem;margin-top:2rem;font-size:13px;color:#791F1F}
+.err-box h2{font-size:14px;font-weight:500;margin-bottom:6px}
+</style>
+</head>
+<body>
+
+<!-- LOADING -->
+<div id="loading" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:60vh;gap:12px">
+  <div class="spinner"></div>
+  <p style="font-size:13px;color:var(--cs)">Loading timetable...</p>
+</div>
+
+<!-- ERROR -->
+<div id="errBox" style="display:none" class="err-box">
+  <h2>Could not load timetable</h2>
+  <p id="errMsg"></p>
+</div>
+
+<!-- SETUP SCREEN -->
+<div class="screen" id="sSetup">
+  <p class="sh1">Set up your schedule</p>
+  <p class="sh2">Select the subjects you attend and pick your group for each one</p>
+  <div class="slbl">Your subjects</div>
+  <div class="chips" id="setupChips"></div>
+  <div class="sf">
+    <button class="btn-p" id="setupBtn" disabled onclick="goMain()">
+      <i class="ti ti-check" aria-hidden="true" style="font-size:14px"></i> View my timetable
+    </button>
+    <span class="scnt" id="scnt">Select at least one subject</span>
+  </div>
+</div>
+
+<!-- MAIN SCREEN -->
+<div class="screen" id="sMain">
+  <div class="top">
+    <div class="top-l">
+      <div class="eyebrow" id="termLabel">IIM Trichy &middot; PGPM 2025&ndash;27</div>
+      <div class="title">My schedule</div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="stat-n" id="sSes">0</div><div class="stat-l">sessions</div></div>
+      <div class="stat"><div class="stat-n" id="sWks">&ndash;</div><div class="stat-l">weeks left</div></div>
+    </div>
+  </div>
+
+  <div class="sbar" onclick="goSetup()" title="Edit subjects">
+    <span class="sbar-txt" id="sbarTxt">&ndash;</span>
+    <span class="sbar-edit"><i class="ti ti-edit" aria-hidden="true" style="font-size:12px"></i> Edit</span>
+  </div>
+
+  <div class="toolbar" id="toolbar"></div>
+
+  <div class="tw">
+    <table>
+      <colgroup>
+        <col class="c-date"><col class="c-day"><col class="c-rem">
+        <col class="c-slot"><col class="c-slot"><col class="c-slot">
+        <col class="c-slot"><col class="c-slot"><col class="c-slot"><col class="c-slot">
+      </colgroup>
+      <thead>
+        <tr>
+          <th style="text-align:left">Date</th><th>Day</th><th>Remarks</th>
+          <th>9:00&ndash;10:30</th><th>10:45&ndash;12:15</th><th>2:15&ndash;3:45</th>
+          <th>4:00&ndash;5:30</th><th>6:00&ndash;7:30</th><th>7:45&ndash;9:15</th><th>9:45&ndash;11:15</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+const STORE = 'iimt_v5';
+let sel = {}, activeWk = 'all', timetable = null;
+
+/* ── Utilities ── */
+function pDate(ds) {
+  const [d, mo, y] = ds.split('-');
+  const M = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+  return new Date(+y, M[mo], +d);
+}
+function todayKey() {
+  const t = new Date();
+  const M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return `${String(t.getDate()).padStart(2,'0')}-${M[t.getMonth()]}-${t.getFullYear()}`;
+}
+function getWeeks(dates) {
+  const sorted = Object.keys(dates).sort((a, b) => pDate(a) - pDate(b));
+  const weeks = [];
+  sorted.forEach(d => {
+    const day = dates[d].day;
+    if (weeks.length === 0 || day === 'Mon') weeks.push({ key: d, label: d.slice(0,6), dates: [d] });
+    else weeks[weeks.length - 1].dates.push(d);
+  });
+  return weeks;
+}
+
+/* ── Prefs ── */
+function loadPrefs() {
+  try { const s = localStorage.getItem(STORE); if (s) { sel = JSON.parse(s); return true; } } catch(e) {}
+  return false;
+}
+function savePrefs() {
+  try { localStorage.setItem(STORE, JSON.stringify(sel)); } catch(e) {}
+}
+
+/* ── Setup screen ── */
+function buildSetupChips() {
+  const grid = document.getElementById('setupChips');
+  grid.innerHTML = '';
+  const subs = timetable.subjects;
+  Object.keys(subs).sort().forEach(sub => {
+    const groups = subs[sub];
+    const isOn = sel[sub] !== undefined;
+    const chip = document.createElement('div');
+    chip.className = 'chip' + (isOn ? ' on' : '');
+    let inner = `<span class="dot"></span><span>${sub}</span>`;
+    if (groups.length > 1) {
+      inner += `<select onclick="event.stopPropagation()">`;
+      groups.forEach(g => inner += `<option value="${g}"${sel[sub] === g ? ' selected' : ''}>Gr.${g}</option>`);
+      inner += '</select>';
+    }
+    chip.innerHTML = inner;
+    chip.addEventListener('click', e => {
+      if (e.target.tagName === 'SELECT' || e.target.tagName === 'OPTION') return;
+      if (chip.classList.contains('on')) { delete sel[sub]; chip.classList.remove('on'); }
+      else { const s = chip.querySelector('select'); sel[sub] = s ? +s.value : (groups[0] || 0); chip.classList.add('on'); }
+      updateFooter();
+    });
+    const s = chip.querySelector('select');
+    if (s) s.addEventListener('change', () => { if (sel[sub] !== undefined) sel[sub] = +s.value; });
+    grid.appendChild(chip);
+  });
+  updateFooter();
+}
+function updateFooter() {
+  const n = Object.keys(sel).length;
+  document.getElementById('setupBtn').disabled = n === 0;
+  document.getElementById('scnt').textContent = n === 0 ? 'Select at least one subject' : `${n} subject${n !== 1 ? 's' : ''} selected`;
+}
+
+/* ── Screen transitions ── */
+function goMain() {
+  savePrefs();
+  document.getElementById('sSetup').classList.remove('active');
+  document.getElementById('sMain').classList.add('active');
+  renderSummary();
+  renderTable();
+}
+function goSetup() {
+  document.getElementById('sMain').classList.remove('active');
+  document.getElementById('sSetup').classList.add('active');
+  buildSetupChips();
+}
+
+/* ── Summary bar ── */
+function renderSummary() {
+  const line = Object.keys(sel).sort().map(s => `${s}${sel[s] ? ` Gr.${sel[s]}` : ''}`).join(' · ');
+  document.getElementById('sbarTxt').textContent = line || 'No subjects selected';
+}
+
+/* ── Table ── */
+function renderTable() {
+  const today = todayKey();
+  const dates = timetable.dates;
+  const allDates = Object.keys(dates).sort((a, b) => pDate(a) - pDate(b));
+
+  let fd;
+  if (activeWk === 'all') {
+    fd = [...new Set(allDates)];
+  } else {
+    const wks = getWeeks(dates);
+    const w = wks.find(x => x.key === activeWk);
+    fd = w ? [...new Set(w.dates)].sort((a, b) => pDate(a) - pDate(b)) : [...new Set(allDates)];
+  }
+
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = '';
+  let cnt = 0;
+
+  fd.forEach(dk => {
+    const row = dates[dk];
+    if (!row) return;
+    const isT = dk === today;
+    const tr = document.createElement('tr');
+    if (isT) tr.classList.add('tr-today');
+
+    // Date cell
+    const td0 = document.createElement('td'); td0.className = 'dc'; td0.textContent = dk;
+    if (isT) {
+      const b = document.createElement('span');
+      b.style.cssText = 'font-size:9px;background:#534AB7;color:#fff;border-radius:4px;padding:1px 5px;margin-left:6px;vertical-align:middle;font-weight:500';
+      b.textContent = 'today';
+      td0.appendChild(b);
+    }
+    tr.appendChild(td0);
+
+    // Day cell
+    const td1 = document.createElement('td'); td1.className = 'dy'; td1.textContent = row.day;
+    tr.appendChild(td1);
+
+    // Remarks cell
+    const tdR = document.createElement('td'); tdR.className = 'rc';
+    if (row.remarks && row.remarks.length > 0) {
+      if (row.remarks.length === 1) {
+        tdR.textContent = row.remarks[0];
+      } else {
+        const ol = document.createElement('ol');
+        row.remarks.forEach(r => { const li = document.createElement('li'); li.textContent = r; ol.appendChild(li); });
+        tdR.appendChild(ol);
+      }
+    }
+    tr.appendChild(tdR);
+
+    // Slot cells
+    row.slots.forEach(entries => {
+      const td = document.createElement('td');
+      let html = '';
+      entries.forEach(e => {
+        if (e.type !== 'cls') { html += `<span class="pill ${e.type}">${e.label}</span>`; return; }
+        const ms = sel[e.sub];
+        if (ms !== undefined && (e.grp === 0 || e.grp === ms)) {
+          html += `<span class="pill cls my"><span class="ps">${e.sub}${e.grp ? ` Gr.${e.grp}` : ''}</span><span class="pr">${e.room}</span></span>`;
+          cnt++;
+        }
+      });
+      td.innerHTML = html || '<span class="em">—</span>';
+      tr.appendChild(td);
+    });
+
+    tbody.appendChild(tr);
+  });
+
+  document.getElementById('sSes').textContent = cnt;
+  const end = pDate('31-Aug-2026');
+  document.getElementById('sWks').textContent = Math.max(0, Math.round((end - pDate(today)) / (7 * 86400000)));
+  buildToolbar();
+}
+
+/* ── Toolbar ── */
+function buildToolbar() {
+  const bar = document.getElementById('toolbar');
+  bar.innerHTML = '';
+  const wks = getWeeks(timetable.dates);
+
+  const all = document.createElement('button');
+  all.className = 'wc' + (activeWk === 'all' ? ' on' : '');
+  all.textContent = 'All'; all.onclick = () => { activeWk = 'all'; renderTable(); };
+  bar.appendChild(all);
+
+  wks.forEach((w, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'wc' + (activeWk === w.key ? ' on' : '');
+    btn.textContent = `Wk ${i + 1}`; btn.title = w.label;
+    btn.onclick = () => { activeWk = w.key; renderTable(); };
+    bar.appendChild(btn);
+  });
+
+  if (timetable.generated) {
+    const lbl = document.createElement('span');
+    lbl.className = 'updated-lbl';
+    lbl.textContent = `Data: ${timetable.generated}`;
+    bar.appendChild(lbl);
+  }
+}
+
+/* ── Boot: fetch data.json ── */
+async function boot() {
+  try {
+    const res = await fetch('data.json?v=' + Date.now());
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    timetable = await res.json();
+
+    document.getElementById('loading').style.display = 'none';
+    if (timetable.term) document.getElementById('termLabel').textContent = 'IIM Trichy · ' + timetable.term;
+
+    loadPrefs();
+    if (Object.keys(sel).length > 0) {
+      document.getElementById('sMain').classList.add('active');
+      renderSummary();
+      renderTable();
+    } else {
+      document.getElementById('sSetup').classList.add('active');
+      buildSetupChips();
+    }
+  } catch (err) {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('errBox').style.display = 'block';
+    document.getElementById('errMsg').textContent =
+      'Failed to load data.json. Make sure data.json is in the same folder as index.html. (' + err.message + ')';
+  }
+}
+
+boot();
+</script>
+</body>
+</html>
