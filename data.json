@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-02",
+  "generated": "2026-07-03",
   "term": "Term IV · Jun–Aug 2026",
   "dates": {
     "18-Jun-2026": {
@@ -1662,7 +1662,7 @@
       "date": "03-Jul-2026",
       "remarks": [
         "DVM Guest Speaker Group-wise",
-        "MS Quiz-1 12.30 pm to 01.00 pm"
+        "MS Quiz-1 20 Minutes"
       ],
       "slots": [
         [
@@ -2461,129 +2461,30 @@
         [
           {
             "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
+            "label": "MFS Mid-term"
           }
         ],
         [
           {
             "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
+            "label": "MFS Mid-term"
           }
         ],
         [
           {
             "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
+            "label": "DVM Mid-term"
           }
         ],
         [
           {
             "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
+            "label": "DVM Mid-term"
           }
         ],
-        [
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          }
-        ],
-        [
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          }
-        ],
-        [
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          }
-        ]
+        [],
+        [],
+        []
       ]
     },
     "11-Jul-2026": {
@@ -2594,173 +2495,49 @@
         [
           {
             "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
+            "label": "DAM Mid-term"
           }
         ],
         [
           {
             "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
+            "label": "DAM Mid-term"
           }
         ],
         [
           {
             "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
+            "label": "CB Mid-term"
           }
         ],
         [
           {
             "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
+            "label": "CB Mid-term"
           }
         ],
-        [
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          }
-        ],
-        [
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          }
-        ],
-        [
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          }
-        ]
+        [],
+        [],
+        []
       ]
     },
     "12-Jul-2026": {
       "day": "Sun",
       "date": "12-Jul-2026",
       "remarks": [
-        "VAL GS Combined CR-009",
         "CR-002"
       ],
       "slots": [
         [
           {
             "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
+            "label": "FIS Mid-term"
           }
         ],
         [
           {
             "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
-          },
-          {
-            "type": "exam",
-            "label": "Mid-term"
+            "label": "FIS Mid-term"
           }
         ],
         [],
@@ -2774,7 +2551,7 @@
       "day": "Mon",
       "date": "13-Jul-2026",
       "remarks": [
-        "FIS will be Rescheduled"
+        "FIS Cancelled"
       ],
       "slots": [
         [
@@ -2799,12 +2576,6 @@
             "sub": "IAPM",
             "grp": 3,
             "room": "CR-017"
-          },
-          {
-            "type": "cls",
-            "sub": "FIS",
-            "grp": 0,
-            "room": "CR-014"
           }
         ],
         [],
@@ -3708,7 +3479,9 @@
     "22-Jul-2026": {
       "day": "Wed",
       "date": "22-Jul-2026",
-      "remarks": [],
+      "remarks": [
+        "IAPM Quiz-2 30 Minutes"
+      ],
       "slots": [
         [
           {
