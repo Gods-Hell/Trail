@@ -695,7 +695,7 @@ function buildToolbar() {
   if (timetable.generated) {
     const lbl = document.createElement('span');
     lbl.className = 'updated-lbl';
-    lbl.textContent = `Data: ${timetable.generated}`;
+    lbl.textContent = `Last Updated: ${timetable.generated}`;
     bar.appendChild(lbl);
   }
   syncStickyOffset();
