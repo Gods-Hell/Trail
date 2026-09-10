@@ -63,6 +63,9 @@ body{font-family:var(--font);color:var(--ct);background:var(--cp);padding:1.5rem
 .wc:hover{background:var(--cb)}.wc.on{background:#EEEDFE;border-color:#AFA9EC;color:#3C3489;font-weight:500}
 .updated-lbl{margin-left:auto;font-size:11px;color:var(--cs);opacity:.7}
 
+/* STICKY HEADER */
+.sticky-top{position:sticky;top:0;z-index:20;background:var(--cp);padding-top:1.5rem;margin-top:-1.5rem;padding-bottom:2px}
+
 /* TABLE */
 .tw{overflow-x:auto;border-radius:var(--rl);border:0.5px solid var(--bd)}
 table{width:100%;border-collapse:collapse;font-size:12px;min-width:760px;table-layout:fixed}
@@ -71,7 +74,7 @@ colgroup col.c-day{width:34px}
 colgroup col.c-rem{width:140px}
 colgroup col.c-slot{}
 thead tr{background:var(--cb)}
-th{padding:8px 6px;font-size:10px;font-weight:500;color:var(--cs);text-align:center;border-bottom:0.5px solid var(--bd);white-space:nowrap;letter-spacing:.03em}
+th{padding:8px 6px;font-size:10px;font-weight:500;color:var(--cs);text-align:center;border-bottom:0.5px solid var(--bd);white-space:nowrap;letter-spacing:.03em;position:sticky;top:var(--sticky-h,0px);background:var(--cb);z-index:15;box-shadow:0 1px 0 var(--bd)}
 th:first-child{text-align:left;padding-left:12px}
 tbody tr{border-bottom:0.5px solid var(--bd)}
 tbody tr:last-child{border-bottom:none}
@@ -145,25 +148,27 @@ tr.tr-today:hover td{background:#CECBF6}
 
 <!-- MAIN SCREEN -->
 <div class="screen" id="sMain">
-  <div class="top">
-    <div class="top-l">
-      <div class="eyebrow" id="termLabel">IIM Trichy &middot; PGPM 2025&ndash;27</div>
-      <div class="title">My schedule</div>
+  <div class="sticky-top" id="stickyTop">
+    <div class="top">
+      <div class="top-l">
+        <div class="eyebrow" id="termLabel">IIM Trichy &middot; PGPM 2025&ndash;27</div>
+        <div class="title">My schedule</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="stat-n" id="sSes">0</div><div class="stat-l">sessions</div></div>
+        <div class="stat"><div class="stat-n" id="sGs">0</div><div class="stat-l">guest sessions</div></div>
+        <div class="stat"><div class="stat-n" id="sWks">&ndash;</div><div class="stat-l">weeks left</div></div>
+      </div>
     </div>
-    <div class="stats">
-      <div class="stat"><div class="stat-n" id="sSes">0</div><div class="stat-l">sessions</div></div>
-      <div class="stat"><div class="stat-n" id="sGs">0</div><div class="stat-l">guest sessions</div></div>
-      <div class="stat"><div class="stat-n" id="sWks">&ndash;</div><div class="stat-l">weeks left</div></div>
+
+    <div class="sbar" onclick="goSetup()" title="Edit subjects">
+      <span class="sbar-txt" id="sbarTxt">&ndash;</span>
+      <span class="sbar-edit"><i class="ti ti-edit" aria-hidden="true" style="font-size:12px"></i> Edit</span>
     </div>
-  </div>
 
-  <div class="sbar" onclick="goSetup()" title="Edit subjects">
-    <span class="sbar-txt" id="sbarTxt">&ndash;</span>
-    <span class="sbar-edit"><i class="ti ti-edit" aria-hidden="true" style="font-size:12px"></i> Edit</span>
+    <div class="toolbar" id="toolbar"></div>
+    <div class="fitlegend" id="fitLegend"></div>
   </div>
-
-  <div class="toolbar" id="toolbar"></div>
-  <div class="fitlegend" id="fitLegend"></div>
 
   <div class="tw">
     <table>
@@ -693,7 +698,16 @@ function buildToolbar() {
     lbl.textContent = `Data: ${timetable.generated}`;
     bar.appendChild(lbl);
   }
+  syncStickyOffset();
 }
+
+/* ── Keep the table header pinned just below the sticky top block ── */
+function syncStickyOffset() {
+  const el = document.getElementById('stickyTop');
+  if (el) document.documentElement.style.setProperty('--sticky-h', el.offsetHeight + 'px');
+}
+window.addEventListener('resize', syncStickyOffset);
+window.addEventListener('load', syncStickyOffset);
 
 /* ── Boot: fetch data.json ── */
 async function boot() {
