@@ -13,7 +13,10 @@
   --c-gs:#9A6B06;--c-qz:#B3261E;--c-fit:#0F6E5C;
   --rm:8px;--rl:12px;
   --font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --sticky-h:230px;
 }
+@media(max-width:900px){:root{--sticky-h:260px}}
+@media(max-width:480px){:root{--sticky-h:360px}}
 @media(prefers-color-scheme:dark){:root{
   --ct:#f0f0f0;--cs:#9ca3af;--cb:#2c2c2e;--cp:#1c1c1e;
   --bd:rgba(255,255,255,0.1);--bs:rgba(255,255,255,0.18);--bp:rgba(255,255,255,0.28);
@@ -695,19 +698,10 @@ function buildToolbar() {
   if (timetable.generated) {
     const lbl = document.createElement('span');
     lbl.className = 'updated-lbl';
-    lbl.textContent = `Last Updated: ${timetable.generated}`;
+    lbl.textContent = `Data: ${timetable.generated}`;
     bar.appendChild(lbl);
   }
-  syncStickyOffset();
 }
-
-/* ── Keep the table header pinned just below the sticky top block ── */
-function syncStickyOffset() {
-  const el = document.getElementById('stickyTop');
-  if (el) document.documentElement.style.setProperty('--sticky-h', el.offsetHeight + 'px');
-}
-window.addEventListener('resize', syncStickyOffset);
-window.addEventListener('load', syncStickyOffset);
 
 /* ── Boot: fetch data.json ── */
 async function boot() {
