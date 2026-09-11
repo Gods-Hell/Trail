@@ -13,10 +13,7 @@
   --c-gs:#9A6B06;--c-qz:#B3261E;--c-fit:#0F6E5C;
   --rm:8px;--rl:12px;
   --font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-  --sticky-h:230px;
 }
-@media(max-width:900px){:root{--sticky-h:260px}}
-@media(max-width:480px){:root{--sticky-h:360px}}
 @media(prefers-color-scheme:dark){:root{
   --ct:#f0f0f0;--cs:#9ca3af;--cb:#2c2c2e;--cp:#1c1c1e;
   --bd:rgba(255,255,255,0.1);--bs:rgba(255,255,255,0.18);--bp:rgba(255,255,255,0.28);
@@ -61,13 +58,16 @@ body{font-family:var(--font);color:var(--ct);background:var(--cp);padding:1.5rem
 .sbar:hover{border-color:var(--bs)}
 .sbar-txt{font-size:12px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .sbar-edit{font-size:11px;color:#534AB7;white-space:nowrap;display:flex;align-items:center;gap:3px;flex-shrink:0}
-.toolbar{display:flex;align-items:center;gap:6px;margin-bottom:1rem;flex-wrap:wrap}
+.toolbar{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .wc{padding:4px 11px;border-radius:var(--rm);border:0.5px solid var(--bs);font-size:11px;cursor:pointer;background:var(--cp);color:var(--cs);transition:all .12s}
 .wc:hover{background:var(--cb)}.wc.on{background:#EEEDFE;border-color:#AFA9EC;color:#3C3489;font-weight:500}
 .updated-lbl{margin-left:auto;font-size:11px;color:var(--cs);opacity:.7}
 
-/* STICKY HEADER */
-.sticky-top{position:sticky;top:0;z-index:20;background:var(--cp);padding-top:1.5rem;margin-top:-1.5rem;padding-bottom:2px}
+/* STICKY (frozen) TOOLBAR + HEADER ROW */
+#stickyBar{position:sticky;top:0;z-index:30;background:var(--cp);padding:10px 0 8px;margin:0 0 2px;transition:box-shadow .15s}
+#stickyBar.stuck{box-shadow:0 4px 10px -6px rgba(0,0,0,.25)}
+#stickyBar .toolbar{margin-bottom:0}
+#stickyBar .fitlegend{margin:6px 0 0}
 
 /* TABLE */
 .tw{overflow-x:auto;border-radius:var(--rl);border:0.5px solid var(--bd)}
@@ -77,7 +77,8 @@ colgroup col.c-day{width:34px}
 colgroup col.c-rem{width:140px}
 colgroup col.c-slot{}
 thead tr{background:var(--cb)}
-th{padding:8px 6px;font-size:10px;font-weight:500;color:var(--cs);text-align:center;border-bottom:0.5px solid var(--bd);white-space:nowrap;letter-spacing:.03em;position:sticky;top:var(--sticky-h,0px);background:var(--cb);z-index:15;box-shadow:0 1px 0 var(--bd)}
+thead th{position:sticky;top:var(--stickyOffset,0px);z-index:20;background:var(--cb)}
+th{padding:8px 6px;font-size:10px;font-weight:500;color:var(--cs);text-align:center;border-bottom:0.5px solid var(--bd);white-space:nowrap;letter-spacing:.03em}
 th:first-child{text-align:left;padding-left:12px}
 tbody tr{border-bottom:0.5px solid var(--bd)}
 tbody tr:last-child{border-bottom:none}
@@ -151,24 +152,24 @@ tr.tr-today:hover td{background:#CECBF6}
 
 <!-- MAIN SCREEN -->
 <div class="screen" id="sMain">
-  <div class="sticky-top" id="stickyTop">
-    <div class="top">
-      <div class="top-l">
-        <div class="eyebrow" id="termLabel">IIM Trichy &middot; PGPM 2025&ndash;27</div>
-        <div class="title">My schedule</div>
-      </div>
-      <div class="stats">
-        <div class="stat"><div class="stat-n" id="sSes">0</div><div class="stat-l">sessions</div></div>
-        <div class="stat"><div class="stat-n" id="sGs">0</div><div class="stat-l">guest sessions</div></div>
-        <div class="stat"><div class="stat-n" id="sWks">&ndash;</div><div class="stat-l">weeks left</div></div>
-      </div>
+  <div class="top">
+    <div class="top-l">
+      <div class="eyebrow" id="termLabel">IIM Trichy &middot; PGPM 2025&ndash;27</div>
+      <div class="title">My schedule</div>
     </div>
-
-    <div class="sbar" onclick="goSetup()" title="Edit subjects">
-      <span class="sbar-txt" id="sbarTxt">&ndash;</span>
-      <span class="sbar-edit"><i class="ti ti-edit" aria-hidden="true" style="font-size:12px"></i> Edit</span>
+    <div class="stats">
+      <div class="stat"><div class="stat-n" id="sSes">0</div><div class="stat-l">sessions</div></div>
+      <div class="stat"><div class="stat-n" id="sGs">0</div><div class="stat-l">guest sessions</div></div>
+      <div class="stat"><div class="stat-n" id="sWks">&ndash;</div><div class="stat-l">weeks left</div></div>
     </div>
+  </div>
 
+  <div class="sbar" onclick="goSetup()" title="Edit subjects">
+    <span class="sbar-txt" id="sbarTxt">&ndash;</span>
+    <span class="sbar-edit"><i class="ti ti-edit" aria-hidden="true" style="font-size:12px"></i> Edit</span>
+  </div>
+
+  <div id="stickyBar">
     <div class="toolbar" id="toolbar"></div>
     <div class="fitlegend" id="fitLegend"></div>
   </div>
@@ -302,6 +303,7 @@ function goMain() {
   document.getElementById('sMain').classList.add('active');
   renderSummary();
   renderTable();
+  initStickyBar();
 }
 function goSetup() {
   document.getElementById('sMain').classList.remove('active');
@@ -647,6 +649,22 @@ function renderTable() {
   buildToolbar();
 }
 
+/* ── Sticky bar (freezes toolbar + table header on scroll) ── */
+let stickyInited = false;
+function initStickyBar() {
+  const bar = document.getElementById('stickyBar');
+  if (!bar) return;
+  const set = () => document.documentElement.style.setProperty('--stickyOffset', bar.offsetHeight + 'px');
+  set();
+  if (stickyInited) return;
+  stickyInited = true;
+  if (window.ResizeObserver) new ResizeObserver(set).observe(bar);
+  else window.addEventListener('resize', set);
+  window.addEventListener('scroll', () => {
+    bar.classList.toggle('stuck', bar.getBoundingClientRect().top <= 0);
+  }, { passive: true });
+}
+
 /* ── Toolbar ── */
 function buildToolbar() {
   const bar = document.getElementById('toolbar');
@@ -719,6 +737,7 @@ async function boot() {
       document.getElementById('sMain').classList.add('active');
       renderSummary();
       renderTable();
+      initStickyBar();
     } else {
       document.getElementById('sSetup').classList.add('active');
       buildSetupChips();
