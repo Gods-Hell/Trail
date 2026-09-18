@@ -1,14 +1,14 @@
 {
-  "generated": "10 Sept 2026, 11:49:50 am",
+  "generated": "19 Sept 2026, 1:40:12 am",
   "term": "Term V",
   "stats": {
     "dates": 97,
     "subjects": 22,
-    "classes": 836,
-    "guestSessions": 67,
+    "classes": 838,
+    "guestSessions": 66,
     "gsNotices": 2,
-    "quizNotices": 6,
-    "events": 161
+    "quizNotices": 11,
+    "events": 171
   },
   "subjects": {
     "MMM": [
@@ -763,7 +763,8 @@
       "day": "Fri",
       "date": "11-Sep-2026",
       "remarks": [
-        "CR-115 Booked for Placement"
+        "CR-115 Booked for Placement",
+        "CR-014 Booked for MACR"
       ],
       "gs": [],
       "quiz": [],
@@ -779,6 +780,10 @@
           }
         ],
         [
+          {
+            "type": "ev",
+            "label": "MACR Extra Session"
+          },
           {
             "type": "gs",
             "sub": null,
@@ -1246,7 +1251,8 @@
       "day": "Tue",
       "date": "15-Sep-2026",
       "remarks": [
-        "Exam Halls Blocked for First Year End Term"
+        "Exam Halls Blocked for First Year End Term",
+        "Placement Full Day"
       ],
       "gs": [],
       "quiz": [],
@@ -1612,7 +1618,8 @@
       "day": "Thur",
       "date": "17-Sep-2026",
       "remarks": [
-        "Exam Halls Blocked for First Year End Term"
+        "Exam Halls Blocked for First Year End Term",
+        "GTM Cancelled"
       ],
       "gs": [],
       "quiz": [],
@@ -1837,7 +1844,8 @@
       "date": "18-Sep-2026",
       "remarks": [
         "Exam Halls Blocked for First Year End Term",
-        "CR-009 Not Available"
+        "CR-009 Not Available",
+        "CR-014 Booked for MACR"
       ],
       "gs": [],
       "quiz": [],
@@ -1853,6 +1861,10 @@
           }
         ],
         [
+          {
+            "type": "ev",
+            "label": "MACR Extra Session CR-014"
+          },
           {
             "type": "gs",
             "sub": null,
@@ -1925,7 +1937,8 @@
       "remarks": [
         "Exam Halls Blocked for First Year End Term",
         "CR-009 Not Available",
-        "Full Day Blocked"
+        "Full Day Blocked",
+        "BS-PPP Case Submission"
       ],
       "gs": [],
       "quiz": [],
@@ -2090,9 +2103,13 @@
     "21-Sep-2026": {
       "day": "Mon",
       "date": "21-Sep-2026",
-      "remarks": [],
+      "remarks": [
+        "CBM Quiz-1 30 Minutes"
+      ],
       "gs": [],
-      "quiz": [],
+      "quiz": [
+        "CBM Quiz-1 30 Minutes"
+      ],
       "slots": [
         [
           {
@@ -2267,7 +2284,9 @@
     "22-Sep-2026": {
       "day": "Tue",
       "date": "22-Sep-2026",
-      "remarks": [],
+      "remarks": [
+        "GTM Make-up Session"
+      ],
       "gs": [],
       "quiz": [],
       "slots": [
@@ -2414,6 +2433,16 @@
         [
           {
             "type": "cls",
+            "sub": "GTM",
+            "grp": 1,
+            "faculty": [
+              "VM"
+            ],
+            "room": "CR-010",
+            "label": "GTM Gr.1 [VM] CR-010"
+          },
+          {
+            "type": "cls",
             "sub": "EBEC",
             "grp": 2,
             "faculty": [
@@ -2454,6 +2483,16 @@
           }
         ],
         [
+          {
+            "type": "cls",
+            "sub": "GTM",
+            "grp": 2,
+            "faculty": [
+              "VM"
+            ],
+            "room": "CR-010",
+            "label": "GTM Gr.2 [VM] CR-010"
+          },
           {
             "type": "cls",
             "sub": "EBEC",
@@ -2498,7 +2537,10 @@
     "23-Sep-2026": {
       "day": "Wed",
       "date": "23-Sep-2026",
-      "remarks": [],
+      "remarks": [
+        "Term-VI Elective Presentation 09.00 AM to 12.15 PM",
+        "CR-008 Booked for DPR Office 11.00 TO 01.00"
+      ],
       "gs": [],
       "quiz": [],
       "slots": [
@@ -2639,7 +2681,9 @@
     "24-Sep-2026": {
       "day": "Thur",
       "date": "24-Sep-2026",
-      "remarks": [],
+      "remarks": [
+        "Term-VI Bidding Evening"
+      ],
       "gs": [],
       "quiz": [],
       "slots": [
@@ -2830,7 +2874,9 @@
     "25-Sep-2026": {
       "day": "Fri",
       "date": "25-Sep-2026",
-      "remarks": [],
+      "remarks": [
+        "Term-VI Elective Bidding"
+      ],
       "gs": [],
       "quiz": [],
       "slots": [
@@ -2938,7 +2984,9 @@
     "26-Sep-2026": {
       "day": "Sat",
       "date": "26-Sep-2026",
-      "remarks": [],
+      "remarks": [
+        "BS-PPP Case Submission"
+      ],
       "gs": [],
       "quiz": [],
       "slots": [
@@ -3111,7 +3159,7 @@
       "day": "Sun",
       "date": "27-Sep-2026",
       "remarks": [
-        "CBM Gr.2 (07.45 pm to 09.15 pm) may be preponed"
+        "CBM Gr.2 (07.45 pm to 09.15 pm) Preponed to 02.15 to 03.45"
       ],
       "gs": [],
       "quiz": [],
@@ -3182,24 +3230,18 @@
         ],
         [
           {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Guest Speaker"
+            "type": "cls",
+            "sub": "CBM",
+            "grp": 2,
+            "faculty": [
+              "BLR",
+              "VF"
+            ],
+            "room": "CR-014",
+            "label": "CBM Gr.2 [BLR,VF] CR-014"
           }
         ],
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Guest Speaker"
-          }
-        ],
+        [],
         [
           {
             "type": "cls",
@@ -3225,19 +3267,7 @@
             "label": "ADPM [ASI, SJ,VF] CR-015"
           }
         ],
-        [
-          {
-            "type": "cls",
-            "sub": "CBM",
-            "grp": 2,
-            "faculty": [
-              "BLR",
-              "VF"
-            ],
-            "room": "CR-014",
-            "label": "CBM Gr.2 [BLR,VF] CR-014"
-          }
-        ],
+        [],
         []
       ]
     },
@@ -3587,9 +3617,13 @@
     "30-Sep-2026": {
       "day": "Wed",
       "date": "30-Sep-2026",
-      "remarks": [],
+      "remarks": [
+        "BS-PPP Quiz-1 10 Minutes"
+      ],
       "gs": [],
-      "quiz": [],
+      "quiz": [
+        "BS-PPP Quiz-1 10 Minutes"
+      ],
       "slots": [
         [
           {
@@ -4173,16 +4207,7 @@
             "label": "Guest Speaker"
           }
         ],
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Guest Speaker"
-          }
-        ]
+        []
       ]
     },
     "05-Oct-2026": {
@@ -4986,11 +5011,19 @@
     "09-Oct-2026": {
       "day": "Fri",
       "date": "09-Oct-2026",
-      "remarks": [],
+      "remarks": [
+        "SCM Quiz-1 1 Hour"
+      ],
       "gs": [],
-      "quiz": [],
+      "quiz": [
+        "SCM Quiz-1 1 Hour"
+      ],
       "slots": [
         [
+          {
+            "type": "exam",
+            "label": "SCM Quiz-1"
+          },
           {
             "type": "gs",
             "sub": null,
@@ -5406,7 +5439,9 @@
     "12-Oct-2026": {
       "day": "Mon",
       "date": "12-Oct-2026",
-      "remarks": [],
+      "remarks": [
+        "CIS Mid-Term Report Submission"
+      ],
       "gs": [],
       "quiz": [],
       "slots": [
@@ -6140,7 +6175,9 @@
     "16-Oct-2026": {
       "day": "Fri",
       "date": "16-Oct-2026",
-      "remarks": [],
+      "remarks": [
+        "MDPW Make-up session"
+      ],
       "gs": [],
       "quiz": [],
       "slots": [
@@ -6166,22 +6203,14 @@
         ],
         [
           {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
+            "type": "ev",
+            "label": "MDPW Make-up Session"
           }
         ],
         [
           {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
+            "type": "ev",
+            "label": "MDPW Make-up Session"
           }
         ],
         [
@@ -7022,13 +7051,23 @@
     "23-Oct-2026": {
       "day": "Fri",
       "date": "23-Oct-2026",
-      "remarks": [],
+      "remarks": [
+        "MDPW tentative Make-up"
+      ],
       "gs": [],
       "quiz": [],
       "slots": [
         [
           {
             "type": "gs",
+            "sub": "IF",
+            "room": "",
+            "combined": false,
+            "tentative": true,
+            "label": "IF Guest Speaker Tentative"
+          },
+          {
+            "type": "gs",
             "sub": null,
             "room": "",
             "combined": false,
@@ -7039,6 +7078,14 @@
         [
           {
             "type": "gs",
+            "sub": "IF",
+            "room": "",
+            "combined": false,
+            "tentative": true,
+            "label": "IF Guest Speaker Tentative"
+          },
+          {
+            "type": "gs",
             "sub": null,
             "room": "",
             "combined": false,
@@ -7046,10 +7093,38 @@
             "label": "Quiz / Guest Speaker"
           }
         ],
-        [],
-        [],
-        [],
-        [],
+        [
+          {
+            "type": "ev",
+            "label": "MDPW Make-up Session"
+          }
+        ],
+        [
+          {
+            "type": "ev",
+            "label": "MDPW Make-up Session"
+          }
+        ],
+        [
+          {
+            "type": "gs",
+            "sub": "MMM",
+            "room": "",
+            "combined": false,
+            "tentative": true,
+            "label": "MMM Guest Speaker Tentative"
+          }
+        ],
+        [
+          {
+            "type": "gs",
+            "sub": "MMM",
+            "room": "",
+            "combined": false,
+            "tentative": true,
+            "label": "MMM Guest Speaker Tentative"
+          }
+        ],
         []
       ]
     },
@@ -7489,21 +7564,21 @@
         [
           {
             "type": "gs",
-            "sub": null,
+            "sub": "MMM",
             "room": "",
             "combined": false,
-            "tentative": false,
-            "label": "Guest Speaker"
+            "tentative": true,
+            "label": "MMM Guest Speaker Tentative"
           }
         ],
         [
           {
             "type": "gs",
-            "sub": null,
+            "sub": "MMM",
             "room": "",
             "combined": false,
-            "tentative": false,
-            "label": "Guest Speaker"
+            "tentative": true,
+            "label": "MMM Guest Speaker Tentative"
           }
         ],
         [
@@ -7610,7 +7685,9 @@
     "01-Nov-2026": {
       "day": "Sun",
       "date": "01-Nov-2026",
-      "remarks": [],
+      "remarks": [
+        "BS-PPP Case Submission"
+      ],
       "gs": [],
       "quiz": [],
       "slots": [
@@ -10305,11 +10382,13 @@
       "day": "Fri",
       "date": "20-Nov-2026",
       "remarks": [
-        "MIT 4.0 Quiz-3 60 Minutes"
+        "MIT 4.0 Quiz-3 60 Minutes",
+        "SCM Quiz-2 60 Minutes"
       ],
       "gs": [],
       "quiz": [
-        "MIT 4.0 Quiz-3 60 Minutes"
+        "MIT 4.0 Quiz-3 60 Minutes",
+        "SCM Quiz-2 60 Minutes"
       ],
       "slots": [
         [
@@ -10327,6 +10406,10 @@
           }
         ],
         [
+          {
+            "type": "exam",
+            "label": "SCM Quiz-2 60 Minutes"
+          },
           {
             "type": "gs",
             "sub": null,
@@ -10394,7 +10477,9 @@
     "21-Nov-2026": {
       "day": "Sat",
       "date": "21-Nov-2026",
-      "remarks": [],
+      "remarks": [
+        "MDPW Make-up Session"
+      ],
       "gs": [],
       "quiz": [],
       "slots": [
@@ -10496,6 +10581,10 @@
         ],
         [
           {
+            "type": "ev",
+            "label": "MDPW Make-up Session"
+          },
+          {
             "type": "gs",
             "sub": null,
             "room": "",
@@ -10505,6 +10594,10 @@
           }
         ],
         [
+          {
+            "type": "ev",
+            "label": "MDPW Make-up Session"
+          },
           {
             "type": "gs",
             "sub": null,
@@ -11178,9 +11271,13 @@
     "30-Nov-2026": {
       "day": "Mon",
       "date": "30-Nov-2026",
-      "remarks": [],
+      "remarks": [
+        "BS-PPP Quiz-1 10 Minutes"
+      ],
       "gs": [],
-      "quiz": [],
+      "quiz": [
+        "BS-PPP Quiz-1 10 Minutes"
+      ],
       "slots": [
         [
           {
@@ -11279,7 +11376,9 @@
     "01-Dec-2026": {
       "day": "Tue",
       "date": "01-Dec-2026",
-      "remarks": [],
+      "remarks": [
+        "CIS Presentation"
+      ],
       "gs": [],
       "quiz": [],
       "slots": [
@@ -11494,7 +11593,9 @@
     "02-Dec-2026": {
       "day": "Wed",
       "date": "02-Dec-2026",
-      "remarks": [],
+      "remarks": [
+        "CIS Presentation"
+      ],
       "gs": [],
       "quiz": [],
       "slots": [
@@ -11575,7 +11676,9 @@
     "03-Dec-2026": {
       "day": "Thur",
       "date": "03-Dec-2026",
-      "remarks": [],
+      "remarks": [
+        "CIS Presentation"
+      ],
       "gs": [],
       "quiz": [],
       "slots": [
