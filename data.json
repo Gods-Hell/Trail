@@ -1,13 +1,17 @@
 {
-  "generated": "19 Sept 2026, 2:30:33 am",
+  "generated": "31 Oct 2026, 1:49:15 pm",
   "term": "Term V",
   "stats": {
     "dates": 97,
     "subjects": 22,
-    "classes": 838,
-    "guestSessions": 66,
-    "gsNotices": 2,
-    "quizNotices": 11,
+    "classes": 832,
+    "guestSessions": 43,
+    "gsNotices": 8,
+    "quizNotices": 25,
+    "cancelNotices": 13,
+    "cancelledClasses": 18,
+    "tentativeClasses": 10,
+    "makeupClasses": 19,
     "events": 171
   },
   "subjects": {
@@ -95,6 +99,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -254,6 +259,9 @@
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [
+        "MDPW (Gr1. & Gr.2) Class cancelled"
+      ],
       "slots": [
         [
           {
@@ -362,7 +370,8 @@
               "PN"
             ],
             "room": "CR-015",
-            "label": "MDPW Gr.1 [PN] CR-015"
+            "label": "MDPW Gr.1 [PN] CR-015",
+            "status": "cancelled"
           }
         ],
         [
@@ -394,7 +403,8 @@
               "PN"
             ],
             "room": "CR-015",
-            "label": "MDPW Gr.2 [PN] CR-015"
+            "label": "MDPW Gr.2 [PN] CR-015",
+            "status": "cancelled"
           }
         ],
         [
@@ -422,6 +432,7 @@
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -564,6 +575,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -768,6 +780,7 @@
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -925,6 +938,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -973,6 +987,7 @@
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -1128,22 +1143,18 @@
       "day": "Mon",
       "date": "14-Sep-2026",
       "remarks": [
-        "Exam Halls Blocked for First Year End Term"
+        "Exam Halls Blocked for First Year End Term",
+        "IF Cancelled",
+        "MMM Cancelled"
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [
+        "IF Cancelled",
+        "MMM Cancelled"
+      ],
       "slots": [
         [
-          {
-            "type": "cls",
-            "sub": "MMM",
-            "grp": 1,
-            "faculty": [
-              "AJS"
-            ],
-            "room": "CR-017",
-            "label": "MMM Gr.1 [AJS] CR-017"
-          },
           {
             "type": "cls",
             "sub": "IM",
@@ -1158,16 +1169,6 @@
         [
           {
             "type": "cls",
-            "sub": "MMM",
-            "grp": 2,
-            "faculty": [
-              "AJS"
-            ],
-            "room": "CR-017",
-            "label": "MMM Gr.2 [AJS] CR-017"
-          },
-          {
-            "type": "cls",
             "sub": "IM",
             "grp": 2,
             "faculty": [
@@ -1178,16 +1179,6 @@
           }
         ],
         [
-          {
-            "type": "cls",
-            "sub": "MMM",
-            "grp": 3,
-            "faculty": [
-              "AJS"
-            ],
-            "room": "CR-017",
-            "label": "MMM Gr.3 [AJS] CR-017"
-          },
           {
             "type": "cls",
             "sub": "SR",
@@ -1231,18 +1222,7 @@
             "label": "MACR Gr.2 [BKD] CR-015"
           }
         ],
-        [
-          {
-            "type": "cls",
-            "sub": "IF",
-            "grp": 0,
-            "faculty": [
-              "SMA"
-            ],
-            "room": "CR-015",
-            "label": "IF [SMA] CR-015"
-          }
-        ],
+        [],
         [],
         []
       ]
@@ -1256,6 +1236,7 @@
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -1469,6 +1450,7 @@
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -1623,6 +1605,9 @@
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [
+        "GTM Cancelled"
+      ],
       "slots": [
         [
           {
@@ -1753,16 +1738,6 @@
         [
           {
             "type": "cls",
-            "sub": "GTM",
-            "grp": 1,
-            "faculty": [
-              "VM"
-            ],
-            "room": "CR-010",
-            "label": "GTM Gr.1 [VM] CR-010"
-          },
-          {
-            "type": "cls",
             "sub": "EBEC",
             "grp": 2,
             "faculty": [
@@ -1805,16 +1780,6 @@
         [
           {
             "type": "cls",
-            "sub": "GTM",
-            "grp": 2,
-            "faculty": [
-              "VM"
-            ],
-            "room": "CR-010",
-            "label": "GTM Gr.2 [VM] CR-010"
-          },
-          {
-            "type": "cls",
             "sub": "EBEC",
             "grp": 3,
             "faculty": [
@@ -1849,6 +1814,7 @@
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -1942,6 +1908,7 @@
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -2026,6 +1993,7 @@
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -2110,6 +2078,7 @@
       "quiz": [
         "CBM Quiz-1 30 Minutes"
       ],
+      "cancel": [],
       "slots": [
         [
           {
@@ -2285,10 +2254,12 @@
       "day": "Tue",
       "date": "22-Sep-2026",
       "remarks": [
-        "GTM Make-up Session"
+        "GTM Make-up Session",
+        "Full Day Placement 12:00 PM to 02:00 PM"
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -2439,7 +2410,8 @@
               "VM"
             ],
             "room": "CR-010",
-            "label": "GTM Gr.1 [VM] CR-010"
+            "label": "GTM Gr.1 [VM] CR-010",
+            "makeup": true
           },
           {
             "type": "cls",
@@ -2491,7 +2463,8 @@
               "VM"
             ],
             "room": "CR-010",
-            "label": "GTM Gr.2 [VM] CR-010"
+            "label": "GTM Gr.2 [VM] CR-010",
+            "makeup": true
           },
           {
             "type": "cls",
@@ -2543,6 +2516,7 @@
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -2681,11 +2655,10 @@
     "24-Sep-2026": {
       "day": "Thur",
       "date": "24-Sep-2026",
-      "remarks": [
-        "Term-VI Bidding Evening"
-      ],
+      "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -2874,11 +2847,10 @@
     "25-Sep-2026": {
       "day": "Fri",
       "date": "25-Sep-2026",
-      "remarks": [
-        "Term-VI Elective Bidding"
-      ],
+      "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -2989,6 +2961,7 @@
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -3163,6 +3136,7 @@
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -3238,7 +3212,8 @@
               "VF"
             ],
             "room": "CR-014",
-            "label": "CBM Gr.2 [BLR,VF] CR-014"
+            "label": "CBM Gr.2 [BLR,VF] CR-014",
+            "status": "tentative"
           }
         ],
         [],
@@ -3274,9 +3249,14 @@
     "28-Sep-2026": {
       "day": "Mon",
       "date": "28-Sep-2026",
-      "remarks": [],
+      "remarks": [
+        "CR-008 Booked for DPR Office 03.00 TO 06.30",
+        "Full Day Placement 08.00AM to 11.45PM",
+        "CR-008 Booked for DPR Office 12.45 pm to 02.00 pm"
+      ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -3426,9 +3406,13 @@
     "29-Sep-2026": {
       "day": "Tue",
       "date": "29-Sep-2026",
-      "remarks": [],
+      "remarks": [
+        "CR-014 Booked for DPR Office 03.00 TO 06.30",
+        "Full Day Placement 08:00 AM to 11.45 PM"
+      ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -3618,12 +3602,14 @@
       "day": "Wed",
       "date": "30-Sep-2026",
       "remarks": [
-        "BS-PPP Quiz-1 10 Minutes"
+        "BS-PPP Quiz-1 10 Minutes",
+        "CR-008 Blocked for HR"
       ],
       "gs": [],
       "quiz": [
         "BS-PPP Quiz-1 10 Minutes"
       ],
+      "cancel": [],
       "slots": [
         [
           {
@@ -3775,6 +3761,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -3986,6 +3973,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -4032,6 +4020,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -4120,6 +4109,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -4214,12 +4204,16 @@
       "day": "Mon",
       "date": "05-Oct-2026",
       "remarks": [
-        "MIT 4.0 Quiz-1 30 Minutes"
+        "MIT 4.0 Quiz-1 30 Minutes",
+        "Placement Full Day",
+        "CR-008 Booked for DPR Office 03.00 TO 06.30",
+        "Exam Hall Not Available"
       ],
       "gs": [],
       "quiz": [
         "MIT 4.0 Quiz-1 30 Minutes"
       ],
+      "cancel": [],
       "slots": [
         [
           {
@@ -4394,9 +4388,13 @@
     "06-Oct-2026": {
       "day": "Tue",
       "date": "06-Oct-2026",
-      "remarks": [],
+      "remarks": [
+        "Placement Full Day",
+        "Exam Hall Not Available"
+      ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -4646,12 +4644,12 @@
       "day": "Wed",
       "date": "07-Oct-2026",
       "remarks": [
-        "IM Quiz-1 20 Minutes"
+        "Exam Hall Not Available",
+        "Placement Full Day"
       ],
       "gs": [],
-      "quiz": [
-        "IM Quiz-1 20 Minutes"
-      ],
+      "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -4800,9 +4798,13 @@
     "08-Oct-2026": {
       "day": "Thur",
       "date": "08-Oct-2026",
-      "remarks": [],
+      "remarks": [
+        "Exam Hall Not Available",
+        "Placement Full Day"
+      ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -5012,17 +5014,36 @@
       "day": "Fri",
       "date": "09-Oct-2026",
       "remarks": [
-        "SCM Quiz-1 1 Hour"
+        "SCM Quiz-1 1 Hour",
+        "BSF Quiz-1 30 Minutes",
+        "IM Quiz-1 20 Minutes"
       ],
       "gs": [],
       "quiz": [
-        "SCM Quiz-1 1 Hour"
+        "SCM Quiz-1 1 Hour",
+        "BSF Quiz-1 30 Minutes",
+        "IM Quiz-1 20 Minutes"
       ],
+      "cancel": [],
       "slots": [
         [
           {
             "type": "exam",
-            "label": "SCM Quiz-1"
+            "label": "SCM Quiz-1 60 Minutes"
+          },
+          {
+            "type": "gs",
+            "sub": null,
+            "room": "",
+            "combined": false,
+            "tentative": false,
+            "label": "Guest Speaker"
+          }
+        ],
+        [
+          {
+            "type": "exam",
+            "label": "BSF Quiz-1 30 Minutes"
           },
           {
             "type": "gs",
@@ -5045,15 +5066,9 @@
         ],
         [
           {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Guest Speaker"
-          }
-        ],
-        [
+            "type": "exam",
+            "label": "IM Quiz 20 Minutes"
+          },
           {
             "type": "gs",
             "sub": null,
@@ -5089,9 +5104,14 @@
     "10-Oct-2026": {
       "day": "Sat",
       "date": "10-Oct-2026",
-      "remarks": [],
+      "remarks": [
+        "PF Quiz-1 30 Minutes"
+      ],
       "gs": [],
-      "quiz": [],
+      "quiz": [
+        "PF Quiz-1 30 Minutes"
+      ],
+      "cancel": [],
       "slots": [
         [
           {
@@ -5193,6 +5213,10 @@
         ],
         [
           {
+            "type": "exam",
+            "label": "PF Quiz-1"
+          },
+          {
             "type": "gs",
             "sub": null,
             "room": "",
@@ -5282,6 +5306,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -5440,10 +5465,16 @@
       "day": "Mon",
       "date": "12-Oct-2026",
       "remarks": [
-        "CIS Mid-Term Report Submission"
+        "CIS Mid-Term Report Submission",
+        "SDM Quiz-1 30 Minutes",
+        "CR-008 Booked for DPR office 03.00 TO 06.30",
+        "Placement Full Day"
       ],
       "gs": [],
-      "quiz": [],
+      "quiz": [
+        "SDM Quiz-1 30 Minutes"
+      ],
+      "cancel": [],
       "slots": [
         [
           {
@@ -5585,9 +5616,14 @@
     "13-Oct-2026": {
       "day": "Tue",
       "date": "13-Oct-2026",
-      "remarks": [],
+      "remarks": [
+        "IF Quiz - 1 20 Minutes"
+      ],
       "gs": [],
-      "quiz": [],
+      "quiz": [
+        "IF Quiz - 1 20 Minutes"
+      ],
+      "cancel": [],
       "slots": [
         [
           {
@@ -5833,9 +5869,15 @@
     "14-Oct-2026": {
       "day": "Wed",
       "date": "14-Oct-2026",
-      "remarks": [],
+      "remarks": [
+        "PRS Quiz - 1 20 Minutes",
+        "Placement Full Day"
+      ],
       "gs": [],
-      "quiz": [],
+      "quiz": [
+        "PRS Quiz - 1 20 Minutes"
+      ],
+      "cancel": [],
       "slots": [
         [
           {
@@ -5964,9 +6006,14 @@
     "15-Oct-2026": {
       "day": "Thur",
       "date": "15-Oct-2026",
-      "remarks": [],
+      "remarks": [
+        "Placement Full Day",
+        "CR-009 Not Available",
+        "MDPW Venue is CR-002"
+      ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -6176,133 +6223,102 @@
       "day": "Fri",
       "date": "16-Oct-2026",
       "remarks": [
-        "MDPW Make-up session"
+        "MDPW Make-up session",
+        "Placement Full Day",
+        "CR-009 Not Available",
+        "CR-008 Booked for HR CR-010 Booked for Placement"
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
+        [],
+        [],
         [
           {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
+            "type": "cls",
+            "sub": "MDPW",
+            "grp": 1,
+            "faculty": [
+              "PN"
+            ],
+            "room": "CR-015",
+            "label": "MDPW Gr.1 [PN] CR-015",
+            "makeup": true
           }
         ],
         [
           {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
+            "type": "cls",
+            "sub": "MDPW",
+            "grp": 2,
+            "faculty": [
+              "PN"
+            ],
+            "room": "CR-015",
+            "label": "MDPW Gr.2 [PN] CR-015",
+            "makeup": true
           }
         ],
-        [
-          {
-            "type": "ev",
-            "label": "MDPW Make-up Session"
-          }
-        ],
-        [
-          {
-            "type": "ev",
-            "label": "MDPW Make-up Session"
-          }
-        ],
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
-          }
-        ],
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
-          }
-        ],
+        [],
+        [],
         []
       ]
     },
     "17-Oct-2026": {
       "day": "Sat",
       "date": "17-Oct-2026",
-      "remarks": [],
-      "gs": [],
-      "quiz": [],
+      "remarks": [
+        "EBEC Guest Speaker CR-009 (H)",
+        "CBM Quiz - 2 20 Minutes",
+        "Placement Full Day"
+      ],
+      "gs": [
+        "EBEC Guest Speaker CR-009 (H)"
+      ],
+      "quiz": [
+        "CBM Quiz - 2 20 Minutes"
+      ],
+      "cancel": [],
       "slots": [
+        [],
         [
           {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
+            "type": "exam",
+            "label": "CBM Quiz-2 20 Minutes"
           }
         ],
         [
           {
             "type": "gs",
-            "sub": null,
-            "room": "",
+            "sub": "SDM",
+            "room": "CR-009",
             "combined": false,
             "tentative": false,
-            "label": "Quiz / Guest Speaker"
+            "label": "SDM Guest Speaker CR-009"
           }
         ],
         [
           {
             "type": "gs",
-            "sub": null,
-            "room": "",
+            "sub": "EBEC",
+            "room": "CR-009",
             "combined": false,
             "tentative": false,
-            "label": "Quiz / Guest Speaker"
+            "label": "EBEC Guest Speaker CR-009"
           }
         ],
         [
           {
             "type": "gs",
-            "sub": null,
-            "room": "",
+            "sub": "EBEC",
+            "room": "CR-009",
             "combined": false,
             "tentative": false,
-            "label": "Quiz / Guest Speaker"
+            "label": "EBEC Guest Speaker CR-009"
           }
         ],
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
-          }
-        ],
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
-          }
-        ],
+        [],
         []
       ]
     },
@@ -6312,76 +6328,30 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
-          }
-        ],
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
-          }
-        ],
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
-          }
-        ],
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
-          }
-        ],
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
-          }
-        ],
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
-          }
-        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
         []
       ]
     },
     "19-Oct-2026": {
       "day": "Mon",
       "date": "19-Oct-2026",
-      "remarks": [],
+      "remarks": [
+        "CR-008 Booked for DPR office 03.00 TO 06.30",
+        "GTM Quiz-1 30 Minutes",
+        "Placement Full Day"
+      ],
       "gs": [],
-      "quiz": [],
+      "quiz": [
+        "GTM Quiz-1 30 Minutes"
+      ],
+      "cancel": [],
       "slots": [
         [
           {
@@ -6500,9 +6470,12 @@
     "20-Oct-2026": {
       "day": "Tue",
       "date": "20-Oct-2026",
-      "remarks": [],
+      "remarks": [
+        "Placement Full Day"
+      ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -6685,9 +6658,12 @@
     "21-Oct-2026": {
       "day": "Wed",
       "date": "21-Oct-2026",
-      "remarks": [],
+      "remarks": [
+        "Placement Full Day"
+      ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -6816,9 +6792,15 @@
     "22-Oct-2026": {
       "day": "Thur",
       "date": "22-Oct-2026",
-      "remarks": [],
+      "remarks": [
+        "Placement Full Day",
+        "EBEC Cancelled"
+      ],
       "gs": [],
       "quiz": [],
+      "cancel": [
+        "EBEC Cancelled"
+      ],
       "slots": [
         [
           {
@@ -6931,16 +6913,6 @@
           },
           {
             "type": "cls",
-            "sub": "EBEC",
-            "grp": 1,
-            "faculty": [
-              "GPK"
-            ],
-            "room": "CR-017",
-            "label": "EBEC Gr.1 [GPK] CR-017"
-          },
-          {
-            "type": "cls",
             "sub": "B2B",
             "grp": 1,
             "faculty": [
@@ -6983,16 +6955,6 @@
           },
           {
             "type": "cls",
-            "sub": "EBEC",
-            "grp": 2,
-            "faculty": [
-              "GPK"
-            ],
-            "room": "CR-017",
-            "label": "EBEC Gr.2 [GPK] CR-017"
-          },
-          {
-            "type": "cls",
             "sub": "B2B",
             "grp": 2,
             "faculty": [
@@ -7032,16 +6994,6 @@
             ],
             "room": "CR-010",
             "label": "GTM Gr.2 [VM] CR-010"
-          },
-          {
-            "type": "cls",
-            "sub": "EBEC",
-            "grp": 3,
-            "faculty": [
-              "GPK"
-            ],
-            "room": "CR-017",
-            "label": "EBEC Gr.3 [GPK] CR-017"
           }
         ],
         [],
@@ -7052,79 +7004,66 @@
       "day": "Fri",
       "date": "23-Oct-2026",
       "remarks": [
-        "MDPW tentative Make-up"
+        "IF GS (M) MDPW Make-up",
+        "MMM Guest Speaker (M) CR-009",
+        "Placement Full Day",
+        "CR-115 Booked for DPR"
       ],
-      "gs": [],
+      "gs": [
+        "IF GS (M) MDPW Make-up",
+        "MMM Guest Speaker (M) CR-009"
+      ],
       "quiz": [],
+      "cancel": [],
       "slots": [
+        [],
         [
           {
             "type": "gs",
             "sub": "IF",
-            "room": "",
-            "combined": false,
-            "tentative": true,
-            "label": "IF Guest Speaker Tentative"
-          },
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
+            "room": "CR-014",
             "combined": false,
             "tentative": false,
-            "label": "Quiz / Guest Speaker"
+            "label": "IF GS CR-014"
           }
         ],
         [
           {
-            "type": "gs",
-            "sub": "IF",
-            "room": "",
-            "combined": false,
-            "tentative": true,
-            "label": "IF Guest Speaker Tentative"
-          },
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
+            "type": "cls",
+            "sub": "MDPW",
+            "grp": 1,
+            "faculty": [
+              "PN"
+            ],
+            "room": "CR-015",
+            "label": "MDPW Gr.1 [PN] CR-015",
+            "makeup": true
           }
         ],
         [
           {
-            "type": "ev",
-            "label": "MDPW Make-up Session"
-          }
-        ],
-        [
-          {
-            "type": "ev",
-            "label": "MDPW Make-up Session"
+            "type": "cls",
+            "sub": "MDPW",
+            "grp": 2,
+            "faculty": [
+              "PN"
+            ],
+            "room": "CR-015",
+            "label": "MDPW Gr.2 [PN] CR-015",
+            "makeup": true
           }
         ],
         [
           {
             "type": "gs",
             "sub": "MMM",
-            "room": "",
+            "room": "CR-009",
             "combined": false,
-            "tentative": true,
-            "label": "MMM Guest Speaker Tentative"
+            "tentative": false,
+            "label": "MMM Guest Speaker CR-009"
           }
         ],
-        [
-          {
-            "type": "gs",
-            "sub": "MMM",
-            "room": "",
-            "combined": false,
-            "tentative": true,
-            "label": "MMM Guest Speaker Tentative"
-          }
-        ],
+        [],
         []
       ]
     },
@@ -7134,6 +7073,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -7180,6 +7120,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -7226,6 +7167,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -7269,9 +7211,12 @@
     "27-Oct-2026": {
       "day": "Tue",
       "date": "27-Oct-2026",
-      "remarks": [],
+      "remarks": [
+        "CR-115 Booked for DPR 09.00 AM to 12.00 PM"
+      ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -7318,6 +7263,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -7364,6 +7310,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -7408,12 +7355,11 @@
       "day": "Fri",
       "date": "30-Oct-2026",
       "remarks": [
-        "General Guest Speaker (CR-009 Not Available)"
+        "(CR-009 Not Available)"
       ],
-      "gs": [
-        "General Guest Speaker (CR-009 Not Available)"
-      ],
+      "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -7458,12 +7404,12 @@
       "day": "Sat",
       "date": "31-Oct-2026",
       "remarks": [
-        "General Guest Speaker (CR-009 Not Available)"
+        "(CR-009 Not Available)",
+        "BS-PPP Case Submission"
       ],
-      "gs": [
-        "General Guest Speaker (CR-009 Not Available)"
-      ],
+      "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -7564,21 +7510,21 @@
         [
           {
             "type": "gs",
-            "sub": "MMM",
+            "sub": null,
             "room": "",
             "combined": false,
-            "tentative": true,
-            "label": "MMM Guest Speaker Tentative"
+            "tentative": false,
+            "label": "GL"
           }
         ],
         [
           {
             "type": "gs",
-            "sub": "MMM",
+            "sub": null,
             "room": "",
             "combined": false,
-            "tentative": true,
-            "label": "MMM Guest Speaker Tentative"
+            "tentative": false,
+            "label": "GL"
           }
         ],
         [
@@ -7686,10 +7632,11 @@
       "day": "Sun",
       "date": "01-Nov-2026",
       "remarks": [
-        "BS-PPP Case Submission"
+        "Placement Full Day"
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -7874,11 +7821,17 @@
       "day": "Mon",
       "date": "02-Nov-2026",
       "remarks": [
-        "MIT 4.0 Quiz-2 30 Minutes"
+        "MIT 4.0 Quiz-2 30 Minutes",
+        "Placement 08.00 AM to 10.00AM",
+        "Placement Full Day",
+        "MACR to be cancelled"
       ],
       "gs": [],
       "quiz": [
         "MIT 4.0 Quiz-2 30 Minutes"
+      ],
+      "cancel": [
+        "MACR to be cancelled"
       ],
       "slots": [
         [
@@ -7947,14 +7900,9 @@
             "label": "SR Gr.1 [MKV] CR-014"
           },
           {
-            "type": "cls",
+            "type": "cxl",
             "sub": "MACR",
-            "grp": 1,
-            "faculty": [
-              "BKD"
-            ],
-            "room": "CR-015",
-            "label": "MACR Gr.1 [BKD] CR-015"
+            "label": "MACR Cancelled"
           },
           {
             "type": "cls",
@@ -7979,14 +7927,9 @@
             "label": "SR Gr.2 [MKV] CR-014"
           },
           {
-            "type": "cls",
+            "type": "cxl",
             "sub": "MACR",
-            "grp": 2,
-            "faculty": [
-              "BKD"
-            ],
-            "room": "CR-015",
-            "label": "MACR Gr.2 [BKD] CR-015"
+            "label": "MACR Cancelled"
           },
           {
             "type": "cls",
@@ -8028,9 +7971,18 @@
     "03-Nov-2026": {
       "day": "Tue",
       "date": "03-Nov-2026",
-      "remarks": [],
+      "remarks": [
+        "MDPW Cancelled",
+        "BSF Quiz-2 25 Minutes",
+        "Placement Full Day"
+      ],
       "gs": [],
-      "quiz": [],
+      "quiz": [
+        "BSF Quiz-2 25 Minutes"
+      ],
+      "cancel": [
+        "MDPW Cancelled"
+      ],
       "slots": [
         [
           {
@@ -8162,14 +8114,9 @@
             "label": "B2B Gr.1 [ATK] CR-014"
           },
           {
-            "type": "cls",
+            "type": "cxl",
             "sub": "MDPW",
-            "grp": 1,
-            "faculty": [
-              "PN"
-            ],
-            "room": "CR-015",
-            "label": "MDPW Gr.1 [PN] CR-015"
+            "label": "MDPW Cancelled"
           },
           {
             "type": "cls",
@@ -8214,14 +8161,9 @@
             "label": "B2B Gr.2 [ATK] CR-014"
           },
           {
-            "type": "cls",
+            "type": "cxl",
             "sub": "MDPW",
-            "grp": 2,
-            "faculty": [
-              "PN"
-            ],
-            "room": "CR-015",
-            "label": "MDPW Gr.2 [PN] CR-015"
+            "label": "MDPW Cancelled"
           },
           {
             "type": "cls",
@@ -8263,9 +8205,19 @@
     "04-Nov-2026": {
       "day": "Wed",
       "date": "04-Nov-2026",
-      "remarks": [],
+      "remarks": [
+        "GTM Quiz-2 30 Minutes",
+        "Exam Hall Booked for Placement",
+        "Placement Full Day",
+        "MACR to be cancelled"
+      ],
       "gs": [],
-      "quiz": [],
+      "quiz": [
+        "GTM Quiz-2 30 Minutes"
+      ],
+      "cancel": [
+        "MACR to be cancelled"
+      ],
       "slots": [
         [
           {
@@ -8323,14 +8275,9 @@
             "label": "SR Gr.2 [MKV] CR-014"
           },
           {
-            "type": "cls",
+            "type": "cxl",
             "sub": "MACR",
-            "grp": 2,
-            "faculty": [
-              "BKD"
-            ],
-            "room": "CR-015",
-            "label": "MACR Gr.2 [BKD] CR-015"
+            "label": "MACR Cancelled"
           },
           {
             "type": "cls",
@@ -8365,14 +8312,9 @@
             "label": "SR Gr.1 [MKV] CR-014"
           },
           {
-            "type": "cls",
+            "type": "cxl",
             "sub": "MACR",
-            "grp": 1,
-            "faculty": [
-              "BKD"
-            ],
-            "room": "CR-015",
-            "label": "MACR Gr.1 [BKD] CR-015"
+            "label": "MACR Cancelled"
           },
           {
             "type": "cls",
@@ -8414,9 +8356,18 @@
     "05-Nov-2026": {
       "day": "Thur",
       "date": "05-Nov-2026",
-      "remarks": [],
+      "remarks": [
+        "MDPW Cancelled",
+        "BDDM Quiz-1 20 Minutes",
+        "CR-015 DPR Class on 3.00PM to 06.30PM"
+      ],
       "gs": [],
-      "quiz": [],
+      "quiz": [
+        "BDDM Quiz-1 20 Minutes"
+      ],
+      "cancel": [
+        "MDPW Cancelled"
+      ],
       "slots": [
         [
           {
@@ -8548,14 +8499,9 @@
             "label": "B2B Gr.1 [ATK] CR-014"
           },
           {
-            "type": "cls",
+            "type": "cxl",
             "sub": "MDPW",
-            "grp": 1,
-            "faculty": [
-              "PN"
-            ],
-            "room": "CR-015",
-            "label": "MDPW Gr.1 [PN] CR-015"
+            "label": "MDPW Cancelled"
           },
           {
             "type": "cls",
@@ -8600,14 +8546,9 @@
             "label": "B2B Gr.2 [ATK] CR-014"
           },
           {
-            "type": "cls",
+            "type": "cxl",
             "sub": "MDPW",
-            "grp": 2,
-            "faculty": [
-              "PN"
-            ],
-            "room": "CR-015",
-            "label": "MDPW Gr.2 [PN] CR-015"
+            "label": "MDPW Cancelled"
           },
           {
             "type": "cls",
@@ -8650,36 +8591,70 @@
       "day": "Fri",
       "date": "06-Nov-2026",
       "remarks": [
-        "IM Quiz-2 20 Minutes"
+        "IM Quiz-2 20 Minutes",
+        "MMM Make-up Session in lieu of (14-09-2026)",
+        "Placement Full Day"
       ],
       "gs": [],
       "quiz": [
         "IM Quiz-2 20 Minutes"
       ],
+      "cancel": [],
       "slots": [
         [
           {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
+            "type": "exam",
+            "label": "ISDC Quiz-1"
           }
         ],
         [
           {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
+            "type": "exam",
+            "label": "IM Quiz-2"
           }
         ],
-        [],
-        [],
-        [],
+        [
+          {
+            "type": "cls",
+            "sub": "MMM",
+            "grp": 1,
+            "faculty": [
+              "AJS"
+            ],
+            "room": "CR-017",
+            "label": "MMM Gr.1 [AJS] CR-017",
+            "status": "tentative",
+            "makeup": true
+          }
+        ],
+        [
+          {
+            "type": "cls",
+            "sub": "MMM",
+            "grp": 2,
+            "faculty": [
+              "AJS"
+            ],
+            "room": "CR-017",
+            "label": "MMM Gr.2 [AJS] CR-017",
+            "status": "tentative",
+            "makeup": true
+          }
+        ],
+        [
+          {
+            "type": "cls",
+            "sub": "MMM",
+            "grp": 3,
+            "faculty": [
+              "AJS"
+            ],
+            "room": "CR-017",
+            "label": "MMM Gr.3 [AJS] CR-017",
+            "status": "tentative",
+            "makeup": true
+          }
+        ],
         [],
         []
       ]
@@ -8687,12 +8662,44 @@
     "07-Nov-2026": {
       "day": "Sat",
       "date": "07-Nov-2026",
-      "remarks": [],
-      "gs": [],
+      "remarks": [
+        "Guest Speaker Tentative",
+        "BDDM Make-up"
+      ],
+      "gs": [
+        "Guest Speaker Tentative"
+      ],
       "quiz": [],
+      "cancel": [],
       "slots": [
-        [],
-        [],
+        [
+          {
+            "type": "cls",
+            "sub": "BDDM",
+            "grp": 0,
+            "faculty": [
+              "YN",
+              "VF"
+            ],
+            "room": "CR-015",
+            "label": "BDDM [YN,VF] CR-015",
+            "makeup": true
+          }
+        ],
+        [
+          {
+            "type": "cls",
+            "sub": "BDDM",
+            "grp": 0,
+            "faculty": [
+              "YN",
+              "VF"
+            ],
+            "room": "CR-015",
+            "label": "BDDM [YN,VF] CR-015",
+            "makeup": true
+          }
+        ],
         [
           {
             "type": "gs",
@@ -8721,12 +8728,15 @@
     "08-Nov-2026": {
       "day": "Sun",
       "date": "08-Nov-2026",
-      "remarks": [],
-      "gs": [],
+      "remarks": [
+        "Guest Speaker Tentative"
+      ],
+      "gs": [
+        "Guest Speaker Tentative"
+      ],
       "quiz": [],
+      "cancel": [],
       "slots": [
-        [],
-        [],
         [
           {
             "type": "gs",
@@ -8735,6 +8745,26 @@
             "combined": false,
             "tentative": false,
             "label": "Guest Speaker"
+          }
+        ],
+        [
+          {
+            "type": "gs",
+            "sub": null,
+            "room": "",
+            "combined": false,
+            "tentative": false,
+            "label": "Guest Speaker"
+          }
+        ],
+        [
+          {
+            "type": "gs",
+            "sub": "MMM",
+            "room": "",
+            "combined": false,
+            "tentative": false,
+            "label": "MMM Guest Speaker"
           }
         ],
         [
@@ -8755,9 +8785,15 @@
     "09-Nov-2026": {
       "day": "Mon",
       "date": "09-Nov-2026",
-      "remarks": [],
+      "remarks": [
+        "Exam Hall Not Available First Year Mid Term",
+        "MACR to be cancelled"
+      ],
       "gs": [],
       "quiz": [],
+      "cancel": [
+        "MACR to be cancelled"
+      ],
       "slots": [
         [
           {
@@ -8825,14 +8861,9 @@
             "label": "SR Gr.1 [MKV] CR-014"
           },
           {
-            "type": "cls",
+            "type": "cxl",
             "sub": "MACR",
-            "grp": 1,
-            "faculty": [
-              "BKD"
-            ],
-            "room": "CR-015",
-            "label": "MACR Gr.1 [BKD] CR-015"
+            "label": "MACR Cancelled"
           },
           {
             "type": "cls",
@@ -8857,14 +8888,9 @@
             "label": "SR Gr.2 [MKV] CR-014"
           },
           {
-            "type": "cls",
+            "type": "cxl",
             "sub": "MACR",
-            "grp": 2,
-            "faculty": [
-              "BKD"
-            ],
-            "room": "CR-015",
-            "label": "MACR Gr.2 [BKD] CR-015"
+            "label": "MACR Cancelled"
           },
           {
             "type": "cls",
@@ -8896,9 +8922,12 @@
     "10-Nov-2026": {
       "day": "Tue",
       "date": "10-Nov-2026",
-      "remarks": [],
+      "remarks": [
+        "Exam Hall Not Available First Year Mid Term"
+      ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -9081,9 +9110,13 @@
     "11-Nov-2026": {
       "day": "Wed",
       "date": "11-Nov-2026",
-      "remarks": [],
+      "remarks": [
+        "Exam Hall Not Available First Year Mid Term",
+        "CR-008 HR Class Booked"
+      ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -9232,9 +9265,16 @@
     "12-Nov-2026": {
       "day": "Thur",
       "date": "12-Nov-2026",
-      "remarks": [],
-      "gs": [],
+      "remarks": [
+        "Evening Sangaram",
+        "Exam Hall Not Available First Year Mid Term",
+        "B2B Guest Speaker Session"
+      ],
+      "gs": [
+        "B2B Guest Speaker Session"
+      ],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -9450,6 +9490,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -9496,6 +9537,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -9542,6 +9584,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -9585,9 +9628,13 @@
     "16-Nov-2026": {
       "day": "Mon",
       "date": "16-Nov-2026",
-      "remarks": [],
+      "remarks": [
+        "Placement Full Day",
+        "MACR Make-up"
+      ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -9733,6 +9780,18 @@
           {
             "type": "ev",
             "label": "SCM Tentative"
+          },
+          {
+            "type": "cls",
+            "sub": "MACR",
+            "grp": 1,
+            "faculty": [
+              "BKD"
+            ],
+            "room": "CR-015",
+            "label": "MACR Gr.1 [BKD] CR-015",
+            "status": "tentative",
+            "makeup": true
           }
         ],
         []
@@ -9741,9 +9800,15 @@
     "17-Nov-2026": {
       "day": "Tue",
       "date": "17-Nov-2026",
-      "remarks": [],
+      "remarks": [
+        "SDM Quiz-2 30 Minutes",
+        "MACR Make-up"
+      ],
       "gs": [],
-      "quiz": [],
+      "quiz": [
+        "SDM Quiz-2 30 Minutes"
+      ],
+      "cancel": [],
       "slots": [
         [
           {
@@ -9973,6 +10038,18 @@
           {
             "type": "ev",
             "label": "SCM Tentative"
+          },
+          {
+            "type": "cls",
+            "sub": "MACR",
+            "grp": 2,
+            "faculty": [
+              "BKD"
+            ],
+            "room": "CR-015",
+            "label": "MACR Gr.2 [BKD] CR-015",
+            "status": "tentative",
+            "makeup": true
           }
         ],
         []
@@ -9981,9 +10058,15 @@
     "18-Nov-2026": {
       "day": "Wed",
       "date": "18-Nov-2026",
-      "remarks": [],
+      "remarks": [
+        "BSF Quiz-3 30 Minutes",
+        "MACR Make-up"
+      ],
       "gs": [],
-      "quiz": [],
+      "quiz": [
+        "BSF Quiz-3 30 Minutes"
+      ],
+      "cancel": [],
       "slots": [
         [
           {
@@ -10129,6 +10212,18 @@
           {
             "type": "ev",
             "label": "SCM Tentative"
+          },
+          {
+            "type": "cls",
+            "sub": "MACR",
+            "grp": 1,
+            "faculty": [
+              "BKD"
+            ],
+            "room": "CR-015",
+            "label": "MACR Gr.1 [BKD] CR-015",
+            "status": "tentative",
+            "makeup": true
           }
         ],
         []
@@ -10138,11 +10233,16 @@
       "day": "Thur",
       "date": "19-Nov-2026",
       "remarks": [
-        "IM Quiz-3 20 Minutes"
+        "IM Quiz-3 20 Minutes",
+        "MACR Make-up",
+        "SDM Will be Cancelled"
       ],
       "gs": [],
       "quiz": [
         "IM Quiz-3 20 Minutes"
+      ],
+      "cancel": [
+        "SDM Will be Cancelled"
       ],
       "slots": [
         [
@@ -10167,16 +10267,6 @@
             ],
             "room": "CR-015",
             "label": "ISDC Gr.2 [VKT, AS,VF] CR-015"
-          },
-          {
-            "type": "cls",
-            "sub": "SDM",
-            "grp": 2,
-            "faculty": [
-              "RPS"
-            ],
-            "room": "CR-014",
-            "label": "SDM Gr.2 [RPS] CR-014"
           },
           {
             "type": "cls",
@@ -10221,16 +10311,6 @@
             ],
             "room": "CR-015",
             "label": "ISDC Gr.1 [VKT, AS,VF] CR-015"
-          },
-          {
-            "type": "cls",
-            "sub": "SDM",
-            "grp": 1,
-            "faculty": [
-              "RPS"
-            ],
-            "room": "CR-014",
-            "label": "SDM Gr.1 [RPS] CR-014"
           },
           {
             "type": "cls",
@@ -10373,6 +10453,18 @@
           {
             "type": "ev",
             "label": "SCM Tentative"
+          },
+          {
+            "type": "cls",
+            "sub": "MACR",
+            "grp": 2,
+            "faculty": [
+              "BKD"
+            ],
+            "room": "CR-015",
+            "label": "MACR Gr.2 [BKD] CR-015",
+            "status": "tentative",
+            "makeup": true
           }
         ],
         []
@@ -10383,13 +10475,16 @@
       "date": "20-Nov-2026",
       "remarks": [
         "MIT 4.0 Quiz-3 60 Minutes",
-        "SCM Quiz-2 60 Minutes"
+        "SCM Quiz-2 60 Minutes",
+        "PRS Quiz-2 20 Minutes"
       ],
       "gs": [],
       "quiz": [
         "MIT 4.0 Quiz-3 60 Minutes",
-        "SCM Quiz-2 60 Minutes"
+        "SCM Quiz-2 60 Minutes",
+        "PRS Quiz-2 20 Minutes"
       ],
+      "cancel": [],
       "slots": [
         [
           {
@@ -10397,28 +10492,11 @@
             "label": "MIT 4.0 Quiz-3 60 Minutes"
           },
           {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
-          }
-        ],
-        [
-          {
             "type": "exam",
             "label": "SCM Quiz-2 60 Minutes"
-          },
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Quiz / Guest Speaker"
           }
         ],
+        [],
         [
           {
             "type": "cls",
@@ -10429,7 +10507,8 @@
               "VF"
             ],
             "room": "CR-010",
-            "label": "BS-PPP Gr.1 [AP,VF] CR-010"
+            "label": "BS-PPP Gr.1 [AP,VF] CR-010",
+            "status": "cancelled"
           }
         ],
         [
@@ -10443,6 +10522,14 @@
             ],
             "room": "CR-010",
             "label": "BS-PPP Gr.2 [AP,VF] CR-010"
+          },
+          {
+            "type": "gs",
+            "sub": null,
+            "room": "CR-015",
+            "combined": true,
+            "tentative": false,
+            "label": "BS-PPP Combined Guest Speaker CR-015"
           }
         ],
         [
@@ -10478,10 +10565,14 @@
       "day": "Sat",
       "date": "21-Nov-2026",
       "remarks": [
-        "MDPW Make-up Session"
+        "MDPW Make-up Session",
+        "BDDM Cancelled"
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [
+        "BDDM Cancelled"
+      ],
       "slots": [
         [
           {
@@ -10520,15 +10611,9 @@
             "label": "FDRM Gr.2 [SV,AV,SK,VF] CR-008"
           },
           {
-            "type": "cls",
+            "type": "cxl",
             "sub": "BDDM",
-            "grp": 0,
-            "faculty": [
-              "YN",
-              "VF"
-            ],
-            "room": "CR-015",
-            "label": "BDDM [YN,VF] CR-015"
+            "label": "BDDM Cancelled"
           }
         ],
         [
@@ -10568,43 +10653,31 @@
             "label": "FDRM Gr.2 [SV,AV,SK,VF] CR-008"
           },
           {
-            "type": "cls",
+            "type": "cxl",
             "sub": "BDDM",
+            "label": "BDDM Cancelled"
+          }
+        ],
+        [
+          {
+            "type": "cls",
+            "label": "MDPW Make-up Session",
+            "sub": "MDPW",
             "grp": 0,
-            "faculty": [
-              "YN",
-              "VF"
-            ],
-            "room": "CR-015",
-            "label": "BDDM [YN,VF] CR-015"
+            "faculty": [],
+            "room": "",
+            "makeup": true
           }
         ],
         [
           {
-            "type": "ev",
-            "label": "MDPW Make-up Session"
-          },
-          {
-            "type": "gs",
-            "sub": null,
+            "type": "cls",
+            "label": "MDPW Make-up Session",
+            "sub": "MDPW",
+            "grp": 0,
+            "faculty": [],
             "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Guest Speaker"
-          }
-        ],
-        [
-          {
-            "type": "ev",
-            "label": "MDPW Make-up Session"
-          },
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Guest Speaker"
+            "makeup": true
           }
         ],
         [
@@ -10705,15 +10778,29 @@
             "label": "ADPM [ASI, SJ,VF] CR-015"
           }
         ],
-        []
+        [
+          {
+            "type": "gs",
+            "sub": "ESNVM",
+            "room": "",
+            "combined": false,
+            "tentative": false,
+            "label": "ESNVM Guest Speaker"
+          }
+        ]
       ]
     },
     "22-Nov-2026": {
       "day": "Sun",
       "date": "22-Nov-2026",
-      "remarks": [],
-      "gs": [],
+      "remarks": [
+        "IM Guest Speaker"
+      ],
+      "gs": [
+        "IM Guest Speaker"
+      ],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -10782,21 +10869,21 @@
         [
           {
             "type": "gs",
-            "sub": null,
+            "sub": "IM",
             "room": "",
             "combined": false,
             "tentative": false,
-            "label": "Guest Speaker"
+            "label": "IM Guest Speaker"
           }
         ],
         [
           {
             "type": "gs",
-            "sub": null,
+            "sub": "IM",
             "room": "",
             "combined": false,
             "tentative": false,
-            "label": "Guest Speaker"
+            "label": "IM Guest Speaker"
           }
         ],
         [
@@ -10872,6 +10959,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -10918,6 +11006,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -10964,6 +11053,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -11010,6 +11100,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -11056,6 +11147,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -11099,9 +11191,12 @@
     "28-Nov-2026": {
       "day": "Sat",
       "date": "28-Nov-2026",
-      "remarks": [],
+      "remarks": [
+        "MACR Make-up"
+      ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -11131,22 +11226,30 @@
         ],
         [
           {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Guest Speaker"
+            "type": "cls",
+            "sub": "MACR",
+            "grp": 1,
+            "faculty": [
+              "BKD"
+            ],
+            "room": "CR-015",
+            "label": "MACR Gr.1 [BKD] CR-015",
+            "status": "tentative",
+            "makeup": true
           }
         ],
         [
           {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Guest Speaker"
+            "type": "cls",
+            "sub": "MACR",
+            "grp": 2,
+            "faculty": [
+              "BKD"
+            ],
+            "room": "CR-015",
+            "label": "MACR Gr.2 [BKD] CR-015",
+            "status": "tentative",
+            "makeup": true
           }
         ],
         [
@@ -11184,6 +11287,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -11215,26 +11319,8 @@
             "label": "FDRM Gr.2 [SV,AV,SK,VF] CR-008"
           }
         ],
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Guest Speaker"
-          }
-        ],
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Guest Speaker"
-          }
-        ],
+        [],
+        [],
         [
           {
             "type": "cls",
@@ -11272,12 +11358,17 @@
       "day": "Mon",
       "date": "30-Nov-2026",
       "remarks": [
-        "BS-PPP Quiz-1 10 Minutes"
+        "BS-PPP Quiz-2 10 Minutes",
+        "MIT 4.0 (GS)",
+        "CR-008 Booked for PGPM-HR"
       ],
-      "gs": [],
+      "gs": [
+        "MIT 4.0 (GS)"
+      ],
       "quiz": [
-        "BS-PPP Quiz-1 10 Minutes"
+        "BS-PPP Quiz-2 10 Minutes"
       ],
+      "cancel": [],
       "slots": [
         [
           {
@@ -11377,10 +11468,17 @@
       "day": "Tue",
       "date": "01-Dec-2026",
       "remarks": [
-        "CIS Presentation"
+        "CIS Presentation",
+        "GTM Quiz-3 30 Minutes",
+        "EBEC To be cancelled"
       ],
       "gs": [],
-      "quiz": [],
+      "quiz": [
+        "GTM Quiz-3 30 Minutes"
+      ],
+      "cancel": [
+        "EBEC To be cancelled"
+      ],
       "slots": [
         [
           {
@@ -11479,7 +11577,8 @@
               "GPK"
             ],
             "room": "CR-017",
-            "label": "EBEC Gr.1 [GPK] CR-017"
+            "label": "EBEC Gr.1 [GPK] CR-017",
+            "status": "cancelled"
           },
           {
             "type": "cls",
@@ -11531,7 +11630,8 @@
               "GPK"
             ],
             "room": "CR-017",
-            "label": "EBEC Gr.2 [GPK] CR-017"
+            "label": "EBEC Gr.2 [GPK] CR-017",
+            "status": "cancelled"
           },
           {
             "type": "cls",
@@ -11583,7 +11683,8 @@
               "GPK"
             ],
             "room": "CR-017",
-            "label": "EBEC Gr.3 [GPK] CR-017"
+            "label": "EBEC Gr.3 [GPK] CR-017",
+            "status": "cancelled"
           }
         ],
         [],
@@ -11598,6 +11699,7 @@
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -11681,6 +11783,7 @@
       ],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -11816,6 +11919,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -11862,6 +11966,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -11908,6 +12013,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -11954,6 +12060,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -12000,6 +12107,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -12046,6 +12154,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -12092,6 +12201,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -12138,6 +12248,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
@@ -12184,6 +12295,7 @@
       "remarks": [],
       "gs": [],
       "quiz": [],
+      "cancel": [],
       "slots": [
         [
           {
