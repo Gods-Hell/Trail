@@ -10,14 +10,14 @@
 :root{
   --ct:#1a1a1a;--cs:#6b7280;--cb:#f9fafb;--cp:#ffffff;
   --bd:rgba(0,0,0,0.1);--bs:rgba(0,0,0,0.18);--bp:rgba(0,0,0,0.28);
-  --c-gs:#9A6B06;--c-qz:#B3261E;--c-fit:#0F6E5C;
+  --c-gs:#9A6B06;--c-qz:#B3261E;--c-fit:#0F6E5C;--c-cx:#1E7A3C;
   --rm:8px;--rl:12px;
   --font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
 }
 @media(prefers-color-scheme:dark){:root{
   --ct:#f0f0f0;--cs:#9ca3af;--cb:#2c2c2e;--cp:#1c1c1e;
   --bd:rgba(255,255,255,0.1);--bs:rgba(255,255,255,0.18);--bp:rgba(255,255,255,0.28);
-  --c-gs:#F0B429;--c-qz:#F87171;--c-fit:#4ECDB0;
+  --c-gs:#F0B429;--c-qz:#F87171;--c-fit:#4ECDB0;--c-cx:#5DD486;
 }}
 body{font-family:var(--font);color:var(--ct);background:var(--cp);padding:1.5rem;max-width:1200px;margin:0 auto}
 
@@ -58,16 +58,10 @@ body{font-family:var(--font);color:var(--ct);background:var(--cp);padding:1.5rem
 .sbar:hover{border-color:var(--bs)}
 .sbar-txt{font-size:12px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .sbar-edit{font-size:11px;color:#534AB7;white-space:nowrap;display:flex;align-items:center;gap:3px;flex-shrink:0}
-.toolbar{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.toolbar{display:flex;align-items:center;gap:6px;margin-bottom:1rem;flex-wrap:wrap}
 .wc{padding:4px 11px;border-radius:var(--rm);border:0.5px solid var(--bs);font-size:11px;cursor:pointer;background:var(--cp);color:var(--cs);transition:all .12s}
 .wc:hover{background:var(--cb)}.wc.on{background:#EEEDFE;border-color:#AFA9EC;color:#3C3489;font-weight:500}
 .updated-lbl{margin-left:auto;font-size:11px;color:var(--cs);opacity:.7}
-
-/* STICKY (frozen) TOOLBAR + HEADER ROW */
-#stickyBar{position:sticky;top:0;z-index:30;background:var(--cp);padding:10px 0 8px;margin:0 0 2px;transition:box-shadow .15s}
-#stickyBar.stuck{box-shadow:0 4px 10px -6px rgba(0,0,0,.25)}
-#stickyBar .toolbar{margin-bottom:0}
-#stickyBar .fitlegend{margin:6px 0 0}
 
 /* TABLE */
 .tw{overflow-x:auto;border-radius:var(--rl);border:0.5px solid var(--bd)}
@@ -77,7 +71,6 @@ colgroup col.c-day{width:34px}
 colgroup col.c-rem{width:140px}
 colgroup col.c-slot{}
 thead tr{background:var(--cb)}
-thead th{position:sticky;top:var(--stickyOffset,0px);z-index:20;background:var(--cb)}
 th{padding:8px 6px;font-size:10px;font-weight:500;color:var(--cs);text-align:center;border-bottom:0.5px solid var(--bd);white-space:nowrap;letter-spacing:.03em}
 th:first-child{text-align:left;padding-left:12px}
 tbody tr{border-bottom:0.5px solid var(--bd)}
@@ -100,9 +93,20 @@ tr.tr-today:hover td{background:#CECBF6}
 .gs{background:#FAF3E0;color:#6B4E0B;border:0.5px solid #E8D9AF}
 .gs.mine{border:1.5px solid #C79A18;background:#FBEFCF;color:#5A400A}
 .gs .ps{font-weight:600}
-.rc .gsbadge,.rc .qzbadge{font-style:normal;font-weight:700;line-height:1.4;word-break:break-word}
+.rc .gsbadge,.rc .qzbadge,.rc .cxbadge{font-style:normal;font-weight:700;line-height:1.4;word-break:break-word}
 .rc .gsbadge{color:var(--c-gs)}
 .rc .qzbadge{color:var(--c-qz)}
+.rc .cxbadge{color:var(--c-cx)}
+.rc .cxbadge:not(.mine){opacity:.72}
+/* cancelled class: struck through, never blocks free time */
+.pill.cxl{text-decoration:line-through;text-decoration-thickness:1.5px;background:transparent;color:var(--cs);border:1px solid var(--bs);opacity:.75}
+.pill.cxl .ps::after{content:'cancelled';margin-left:5px;text-decoration:none;display:inline-block;font-weight:600;color:var(--c-cx);font-size:10px}
+/* tentative class: shown, but dashed and tagged */
+.pill.tent{border-style:dashed!important}
+/* small tags inside a class pill: make-up, tentative */
+.pill .tag{display:inline-block;margin-left:5px;font-size:9px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;padding:0 4px;border-radius:3px;vertical-align:1px}
+.pill .tag.mk{background:#534AB7;color:#fff}
+.pill .tag.tn{border:1px dashed currentColor;opacity:.8}
 .rc .gsbadge:not(.mine),.rc .qzbadge:not(.mine){opacity:.72}
 .ev{background:#EAF3DE;color:#27500A}
 .fit{background:transparent;border:1px dashed var(--bs);color:var(--cs);opacity:.9}
@@ -169,10 +173,8 @@ tr.tr-today:hover td{background:#CECBF6}
     <span class="sbar-edit"><i class="ti ti-edit" aria-hidden="true" style="font-size:12px"></i> Edit</span>
   </div>
 
-  <div id="stickyBar">
-    <div class="toolbar" id="toolbar"></div>
-    <div class="fitlegend" id="fitLegend"></div>
-  </div>
+  <div class="toolbar" id="toolbar"></div>
+  <div class="fitlegend" id="fitLegend"></div>
 
   <div class="tw">
     <table>
@@ -303,7 +305,6 @@ function goMain() {
   document.getElementById('sMain').classList.add('active');
   renderSummary();
   renderTable();
-  initStickyBar();
 }
 function goSetup() {
   document.getElementById('sMain').classList.remove('active');
@@ -374,6 +375,7 @@ function busyIntervals(row) {
   (row.slots || []).forEach((entries, i) => {
     const blocks = entries.some(e => {
       if (e.type === 'cls') {
+        if (e.status === 'cancelled') return false;
         const ms = sel[e.sub];
         return ms !== undefined && (e.grp === 0 || e.grp === ms);
       }
@@ -505,9 +507,11 @@ function bestColumn(iv) {
 
 /* ── Table ── */
 // A guest-session notice belongs to me if it names one of my subjects.
-function isMine(text) {
+function isMine(text, anywhere) {
   const lead = (text || '').match(/^([A-Za-z&]{2,8})\b/);
-  return !!(lead && sel[lead[1]] !== undefined);
+  if (lead && sel[lead[1]] !== undefined) return true;
+  // A cancel remark counts as mine if it names any of my subjects.
+  return !!anywhere && Object.keys(sel).some(s => new RegExp('(^|[^A-Za-z0-9])' + s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?![A-Za-z0-9])').test(text));
 }
 
 function renderTable() {
@@ -560,8 +564,8 @@ function renderTable() {
     // Every remark from the sheet is shown, in sheet order. Guest-lecture
     // notices are highlighted as badges but never dropped from the list.
     const rems = row.remarks || [];
-    const gsSet = new Set(row.gs || []), qzSet = new Set(row.quiz || []);
-    const badgeOf = r => gsSet.has(r) ? 'gsbadge' : (qzSet.has(r) ? 'qzbadge' : null);
+    const gsSet = new Set(row.gs || []), qzSet = new Set(row.quiz || []), cxSet = new Set(row.cancel || []);
+    const badgeOf = r => cxSet.has(r) ? 'cxbadge' : gsSet.has(r) ? 'gsbadge' : (qzSet.has(r) ? 'qzbadge' : null);
     if (rems.length === 1 && !badgeOf(rems[0])) {
       tdR.textContent = rems[0];
     } else if (rems.length > 0) {
@@ -571,7 +575,7 @@ function renderTable() {
         const cls = badgeOf(r);
         if (cls) {
           const b = document.createElement('span');
-          b.className = cls + (isMine(r) ? ' mine' : '');
+          b.className = cls + (isMine(r, cls === 'cxbadge') ? ' mine' : '');
           b.textContent = r;
           li.appendChild(b);
         } else {
@@ -615,11 +619,23 @@ function renderTable() {
           gsCnt++;
           return;
         }
+        // "MACR Cancelled" cell: only for people who take MACR.
+        if (e.type === 'cxl') {
+          if (e.sub && sel[e.sub] !== undefined)
+            html += `<span class="pill cxl"><span class="ps">${e.sub}</span></span>`;
+          return;
+        }
         if (e.type !== 'cls') { html += `<span class="pill ${e.type}">${e.label}</span>`; return; }
         const ms = sel[e.sub];
         if (ms !== undefined && (e.grp === 0 || e.grp === ms)) {
-          html += `<span class="pill cls my"><span class="ps">${e.sub}${e.grp ? ` Gr.${e.grp}` : ''}</span><span class="pr">${e.room}</span></span>`;
-          cnt++;
+          const cx = e.status === 'cancelled';
+          const tn = !cx && e.status === 'tentative';
+          const extra = cx ? ' cxl' : (tn ? ' tent' : '');
+          const tags = (e.makeup && !cx ? '<span class="tag mk">make-up</span>' : '') +
+                       (tn ? '<span class="tag tn">tentative</span>' : '');
+          html += `<span class="pill cls${cx ? '' : ' my'}${extra}"><span class="ps">${e.sub}${e.grp ? ` Gr.${e.grp}` : ''}${tags}</span>` +
+                  (e.room ? `<span class="pr">${e.room}</span>` : '') + `</span>`;
+          if (!cx) cnt++;
         }
       });
       // Ghost chips, today / tomorrow only. Times shown are the facility's own
@@ -647,22 +663,6 @@ function renderTable() {
   const end = pDate('12-Dec-2026');
   document.getElementById('sWks').textContent = Math.max(0, Math.round((end - pDate(today)) / (7 * 86400000)));
   buildToolbar();
-}
-
-/* ── Sticky bar (freezes toolbar + table header on scroll) ── */
-let stickyInited = false;
-function initStickyBar() {
-  const bar = document.getElementById('stickyBar');
-  if (!bar) return;
-  const set = () => document.documentElement.style.setProperty('--stickyOffset', bar.offsetHeight + 'px');
-  set();
-  if (stickyInited) return;
-  stickyInited = true;
-  if (window.ResizeObserver) new ResizeObserver(set).observe(bar);
-  else window.addEventListener('resize', set);
-  window.addEventListener('scroll', () => {
-    bar.classList.toggle('stuck', bar.getBoundingClientRect().top <= 0);
-  }, { passive: true });
 }
 
 /* ── Toolbar ── */
@@ -732,12 +732,21 @@ async function boot() {
     if (timetable.term) document.getElementById('termLabel').textContent = 'IIM Trichy · ' + timetable.term;
 
     loadPrefs();
+    // Older data had make-ups as their own subject ("BDDM Make-up"). Fold any
+    // such saved choice into the real subject, and drop subjects that no
+    // longer exist, so nobody silently loses a session.
+    Object.keys(sel).forEach(k => {
+      if (timetable.subjects[k]) return;
+      const base = k.replace(/\s*make[- ]?up.*$/i, '').trim();
+      if (base !== k && timetable.subjects[base] && sel[base] === undefined) sel[base] = sel[k];
+      delete sel[k];
+    });
+    savePrefs();
     loadFit();
     if (Object.keys(sel).length > 0) {
       document.getElementById('sMain').classList.add('active');
       renderSummary();
       renderTable();
-      initStickyBar();
     } else {
       document.getElementById('sSetup').classList.add('active');
       buildSetupChips();
@@ -752,20 +761,21 @@ async function boot() {
 
 boot();
 </script>
+
 <!-- Cloudflare Web Analytics -->
-<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d1f805a4fcbb48dbacd3b0f0ff0d7a2a"}'></script>
-<!-- End Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "659f67ef49ef48a1b112e2cba6037cf9"}'>
+</script>
+<!-- End Cloudflare Web Analytics -->  
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DE6QF1KBL5"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9QKDTZHG2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-DE6QF1KBL5');
+  gtag('config', 'G-L9QKDTZHG2');
 </script>
-
   
 </body>
 </html>
