@@ -107,6 +107,9 @@ tr.tr-today:hover td{background:#CECBF6}
 .pill .tag{display:inline-block;margin-left:5px;font-size:9px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;padding:0 4px;border-radius:3px;vertical-align:1px}
 .pill .tag.mk{background:#534AB7;color:#fff}
 .pill .tag.tn{border:1px dashed currentColor;opacity:.8}
+/* pink in the sheet but no remark confirms it */
+.pill.maybe{border-style:dotted!important;border-color:var(--c-qz)!important}
+.pill .tag.mb{border:1px dotted var(--c-qz);color:var(--c-qz)}
 .rc .gsbadge:not(.mine),.rc .qzbadge:not(.mine){opacity:.72}
 .ev{background:#EAF3DE;color:#27500A}
 .fit{background:transparent;border:1px dashed var(--bs);color:var(--cs);opacity:.9}
@@ -621,8 +624,8 @@ function renderTable() {
         }
         // "MACR Cancelled" cell: only for people who take MACR.
         if (e.type === 'cxl') {
-          if (e.sub && sel[e.sub] !== undefined)
-            html += `<span class="pill cxl"><span class="ps">${e.sub}</span></span>`;
+          if (e.sub && sel[e.sub] !== undefined && (!e.grp || !sel[e.sub] || e.grp === sel[e.sub]))
+            html += `<span class="pill cxl"><span class="ps">${e.sub}${e.grp ? ` Gr.${e.grp}` : ''}</span></span>`;
           return;
         }
         if (e.type !== 'cls') { html += `<span class="pill ${e.type}">${e.label}</span>`; return; }
@@ -630,10 +633,14 @@ function renderTable() {
         if (ms !== undefined && (e.grp === 0 || e.grp === ms)) {
           const cx = e.status === 'cancelled';
           const tn = !cx && e.status === 'tentative';
-          const extra = cx ? ' cxl' : (tn ? ' tent' : '');
+          const mb = !cx && e.status === 'maybe';
+          const extra = cx ? ' cxl' : (tn ? ' tent' : (mb ? ' maybe' : ''));
           const tags = (e.makeup && !cx ? '<span class="tag mk">make-up</span>' : '') +
-                       (tn ? '<span class="tag tn">tentative</span>' : '');
-          html += `<span class="pill cls${cx ? '' : ' my'}${extra}"><span class="ps">${e.sub}${e.grp ? ` Gr.${e.grp}` : ''}${tags}</span>` +
+                       (tn ? '<span class="tag tn">tentative</span>' : '') +
+                       (mb ? '<span class="tag mb">possibly cancelled</span>' : '');
+          const tip = mb ? ' title="Marked pink (cancelled) in the college sheet, but no remark confirms it"'
+                    : (e.colourConflict ? ' title="Sheet colour says cancelled, but the remark says make-up"' : '');
+          html += `<span class="pill cls${cx ? '' : ' my'}${extra}"${tip}><span class="ps">${e.sub}${e.grp ? ` Gr.${e.grp}` : ''}${tags}</span>` +
                   (e.room ? `<span class="pr">${e.room}</span>` : '') + `</span>`;
           if (!cx) cnt++;
         }
