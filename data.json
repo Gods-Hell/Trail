@@ -1,17 +1,18 @@
 {
-  "generated": "31 Oct 2026, 1:49:15 pm",
+  "generated": "3 Nov 2026, 11:19:16 am",
   "term": "Term V",
   "stats": {
     "dates": 97,
     "subjects": 22,
     "classes": 832,
-    "guestSessions": 43,
+    "guestSessions": 42,
     "gsNotices": 8,
-    "quizNotices": 25,
+    "quizNotices": 26,
     "cancelNotices": 13,
-    "cancelledClasses": 18,
-    "tentativeClasses": 10,
-    "makeupClasses": 19,
+    "cancelledClasses": 19,
+    "tentativeClasses": 7,
+    "makeupClasses": 21,
+    "maybeCancelled": 4,
     "events": 171
   },
   "subjects": {
@@ -1119,8 +1120,8 @@
               "BLR",
               "VF"
             ],
-            "room": "CR-008",
-            "label": "CBM Gr.1 [BLR,VF] CR-008"
+            "room": "CR-014",
+            "label": "CBM Gr.1 [BLR,VF] CR-014"
           }
         ],
         [
@@ -7822,16 +7823,16 @@
       "date": "02-Nov-2026",
       "remarks": [
         "MIT 4.0 Quiz-2 30 Minutes",
-        "Placement 08.00 AM to 10.00AM",
+        "Placement 08.00 AM to 10.00 AM",
         "Placement Full Day",
-        "MACR to be cancelled"
+        "MACR & SR Cancelled"
       ],
       "gs": [],
       "quiz": [
         "MIT 4.0 Quiz-2 30 Minutes"
       ],
       "cancel": [
-        "MACR to be cancelled"
+        "MACR & SR Cancelled"
       ],
       "slots": [
         [
@@ -7890,18 +7891,15 @@
             "label": "MMM Gr.3 [AJS] CR-017"
           },
           {
-            "type": "cls",
+            "type": "cxl",
             "sub": "SR",
             "grp": 1,
-            "faculty": [
-              "MKV"
-            ],
-            "room": "CR-014",
-            "label": "SR Gr.1 [MKV] CR-014"
+            "label": "SR Gr.1 Cancelled"
           },
           {
             "type": "cxl",
             "sub": "MACR",
+            "grp": 0,
             "label": "MACR Cancelled"
           },
           {
@@ -7917,18 +7915,15 @@
         ],
         [
           {
-            "type": "cls",
+            "type": "cxl",
             "sub": "SR",
             "grp": 2,
-            "faculty": [
-              "MKV"
-            ],
-            "room": "CR-014",
-            "label": "SR Gr.2 [MKV] CR-014"
+            "label": "SR Gr.2 Cancelled"
           },
           {
             "type": "cxl",
             "sub": "MACR",
+            "grp": 0,
             "label": "MACR Cancelled"
           },
           {
@@ -8116,6 +8111,7 @@
           {
             "type": "cxl",
             "sub": "MDPW",
+            "grp": 0,
             "label": "MDPW Cancelled"
           },
           {
@@ -8163,6 +8159,7 @@
           {
             "type": "cxl",
             "sub": "MDPW",
+            "grp": 0,
             "label": "MDPW Cancelled"
           },
           {
@@ -8206,15 +8203,12 @@
       "day": "Wed",
       "date": "04-Nov-2026",
       "remarks": [
-        "GTM Quiz-2 30 Minutes",
         "Exam Hall Booked for Placement",
         "Placement Full Day",
         "MACR to be cancelled"
       ],
       "gs": [],
-      "quiz": [
-        "GTM Quiz-2 30 Minutes"
-      ],
+      "quiz": [],
       "cancel": [
         "MACR to be cancelled"
       ],
@@ -8277,6 +8271,7 @@
           {
             "type": "cxl",
             "sub": "MACR",
+            "grp": 0,
             "label": "MACR Cancelled"
           },
           {
@@ -8314,6 +8309,7 @@
           {
             "type": "cxl",
             "sub": "MACR",
+            "grp": 0,
             "label": "MACR Cancelled"
           },
           {
@@ -8501,6 +8497,7 @@
           {
             "type": "cxl",
             "sub": "MDPW",
+            "grp": 0,
             "label": "MDPW Cancelled"
           },
           {
@@ -8548,6 +8545,7 @@
           {
             "type": "cxl",
             "sub": "MDPW",
+            "grp": 0,
             "label": "MDPW Cancelled"
           },
           {
@@ -8623,8 +8621,8 @@
             ],
             "room": "CR-017",
             "label": "MMM Gr.1 [AJS] CR-017",
-            "status": "tentative",
-            "makeup": true
+            "makeup": true,
+            "colourConflict": true
           }
         ],
         [
@@ -8637,8 +8635,8 @@
             ],
             "room": "CR-017",
             "label": "MMM Gr.2 [AJS] CR-017",
-            "status": "tentative",
-            "makeup": true
+            "makeup": true,
+            "colourConflict": true
           }
         ],
         [
@@ -8651,8 +8649,8 @@
             ],
             "room": "CR-017",
             "label": "MMM Gr.3 [AJS] CR-017",
-            "status": "tentative",
-            "makeup": true
+            "makeup": true,
+            "colourConflict": true
           }
         ],
         [],
@@ -8664,12 +8662,17 @@
       "date": "07-Nov-2026",
       "remarks": [
         "Guest Speaker Tentative",
-        "BDDM Make-up"
+        "BDDM Make-up",
+        "IF Quiz - 1 20 Minute2",
+        "GTM Quiz -2 30 Minutes"
       ],
       "gs": [
         "Guest Speaker Tentative"
       ],
-      "quiz": [],
+      "quiz": [
+        "IF Quiz - 1 20 Minute2",
+        "GTM Quiz -2 30 Minutes"
+      ],
       "cancel": [],
       "slots": [
         [
@@ -8728,55 +8731,15 @@
     "08-Nov-2026": {
       "day": "Sun",
       "date": "08-Nov-2026",
-      "remarks": [
-        "Guest Speaker Tentative"
-      ],
-      "gs": [
-        "Guest Speaker Tentative"
-      ],
+      "remarks": [],
+      "gs": [],
       "quiz": [],
       "cancel": [],
       "slots": [
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Guest Speaker"
-          }
-        ],
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Guest Speaker"
-          }
-        ],
-        [
-          {
-            "type": "gs",
-            "sub": "MMM",
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "MMM Guest Speaker"
-          }
-        ],
-        [
-          {
-            "type": "gs",
-            "sub": null,
-            "room": "",
-            "combined": false,
-            "tentative": false,
-            "label": "Guest Speaker"
-          }
-        ],
+        [],
+        [],
+        [],
+        [],
         [],
         [],
         []
@@ -8804,7 +8767,8 @@
               "AJS"
             ],
             "room": "CR-017",
-            "label": "MMM Gr.1 [AJS] CR-017"
+            "label": "MMM Gr.1 [AJS] CR-017",
+            "status": "maybe"
           },
           {
             "type": "cls",
@@ -8826,7 +8790,8 @@
               "AJS"
             ],
             "room": "CR-017",
-            "label": "MMM Gr.2 [AJS] CR-017"
+            "label": "MMM Gr.2 [AJS] CR-017",
+            "status": "maybe"
           },
           {
             "type": "cls",
@@ -8848,7 +8813,8 @@
               "AJS"
             ],
             "room": "CR-017",
-            "label": "MMM Gr.3 [AJS] CR-017"
+            "label": "MMM Gr.3 [AJS] CR-017",
+            "status": "maybe"
           },
           {
             "type": "cls",
@@ -8863,6 +8829,7 @@
           {
             "type": "cxl",
             "sub": "MACR",
+            "grp": 0,
             "label": "MACR Cancelled"
           },
           {
@@ -8890,6 +8857,7 @@
           {
             "type": "cxl",
             "sub": "MACR",
+            "grp": 0,
             "label": "MACR Cancelled"
           },
           {
@@ -9112,9 +9080,12 @@
       "date": "11-Nov-2026",
       "remarks": [
         "Exam Hall Not Available First Year Mid Term",
-        "CR-008 HR Class Booked"
+        "CR-008 HR Class Booked",
+        "MMM Guest Speaker"
       ],
-      "gs": [],
+      "gs": [
+        "MMM Guest Speaker"
+      ],
       "quiz": [],
       "cancel": [],
       "slots": [
@@ -9258,7 +9229,16 @@
             "label": "IF [SMA] CR-015"
           }
         ],
-        [],
+        [
+          {
+            "type": "gs",
+            "sub": "MMM",
+            "room": "CR-009",
+            "combined": false,
+            "tentative": false,
+            "label": "MMM Guest Speaker CR-009"
+          }
+        ],
         []
       ]
     },
@@ -10508,7 +10488,7 @@
             ],
             "room": "CR-010",
             "label": "BS-PPP Gr.1 [AP,VF] CR-010",
-            "status": "cancelled"
+            "status": "maybe"
           }
         ],
         [
@@ -10613,6 +10593,7 @@
           {
             "type": "cxl",
             "sub": "BDDM",
+            "grp": 0,
             "label": "BDDM Cancelled"
           }
         ],
@@ -10655,6 +10636,7 @@
           {
             "type": "cxl",
             "sub": "BDDM",
+            "grp": 0,
             "label": "BDDM Cancelled"
           }
         ],
@@ -10782,10 +10764,10 @@
           {
             "type": "gs",
             "sub": "ESNVM",
-            "room": "",
+            "room": "CR-009",
             "combined": false,
             "tentative": false,
-            "label": "ESNVM Guest Speaker"
+            "label": "ESNVM Guest Speaker CR-009"
           }
         ]
       ]
@@ -11319,8 +11301,26 @@
             "label": "FDRM Gr.2 [SV,AV,SK,VF] CR-008"
           }
         ],
-        [],
-        [],
+        [
+          {
+            "type": "gs",
+            "sub": "MACR",
+            "room": "",
+            "combined": false,
+            "tentative": false,
+            "label": "MACR Guest Speaker"
+          }
+        ],
+        [
+          {
+            "type": "gs",
+            "sub": "MACR",
+            "room": "",
+            "combined": false,
+            "tentative": false,
+            "label": "MACR Guest Speaker"
+          }
+        ],
         [
           {
             "type": "cls",
@@ -11359,6 +11359,7 @@
       "date": "30-Nov-2026",
       "remarks": [
         "BS-PPP Quiz-2 10 Minutes",
+        "SR Make-up",
         "MIT 4.0 (GS)",
         "CR-008 Booked for PGPM-HR"
       ],
@@ -11397,6 +11398,15 @@
         [
           {
             "type": "cls",
+            "label": "SR Gr.2 Make-up",
+            "sub": "SR",
+            "grp": 0,
+            "faculty": [],
+            "room": "",
+            "makeup": true
+          },
+          {
+            "type": "cls",
             "sub": "MACR",
             "grp": 1,
             "faculty": [
@@ -11417,6 +11427,15 @@
           }
         ],
         [
+          {
+            "type": "cls",
+            "label": "SR Gr.1 Make-up",
+            "sub": "SR",
+            "grp": 0,
+            "faculty": [],
+            "room": "",
+            "makeup": true
+          },
           {
             "type": "cls",
             "sub": "MACR",
